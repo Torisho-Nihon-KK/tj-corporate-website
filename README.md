@@ -2,7 +2,14 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+```bash
+git clone https://github.com/Torisho-Nihon-KK/tj-corporate
+cd tj-corporate
+
+npm install # Or use any package manager of your choice.
+```
+
+To run the development server locally:
 
 ```bash
 npm run dev
@@ -14,9 +21,11 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the app in action.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file
+
+This project uses the `saas-starter` [repository](https://github.com/nextjs/saas-starter) as starting point on features to be included in the future.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
