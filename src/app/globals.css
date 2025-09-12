@@ -5,26 +5,33 @@
   --foreground: #262626;
 }
 
-@theme inline {
+@theme {
   --color-primary: #f03240;
   --color-secondary: #f2f2f2;
   --color-accent: #f03240;
   --color-primary-foreground: #ffffff;
   --color-secondary-foreground: #262626;
   --color-accent-foreground: #ffffff;
+  --color-primary-muted: #bfbfbf;
 
   --color-white-15: rgba(255, 255, 255, 0.15);
+  --color-gray-15: rgba(38, 38, 38, 0.15);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-eitai-gothic-bold: var(--font-eitai-gothic-bold);
+  --font-eitai-gothic: var(--font-eitai-gothic-bold);
+  --font-noto-sans: var(--font-noto-sans-jp);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-eitai-gothic-bold), sans-serif;
+  font-family: var(--font-eitai-gothic), sans-serif;
+}
+
+.font-noto-sans-jp {
+  font-family: var(--font-noto-sans), sans-serif;
 }
