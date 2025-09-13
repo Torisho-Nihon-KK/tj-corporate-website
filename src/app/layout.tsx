@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import EitaiGothicBold from "next/font/local";
+import localFont from "next/font/local";
 
 import Image from "next/image";
 import Logo from "../../public/logo.svg";
-import { Geist, Geist_Mono, Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import { CircleIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,22 +12,19 @@ import Link from "next/link";
 import { type ClassValue } from "clsx";
 import Header from "@/components/ui/header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const notoSansJP = Noto_Sans_JP({
+const notoSansJP = localFont({
+  src: [
+    {
+      path: "../../public/fonts/NotoSansJP-Regular.ttf",
+      weight: "400",
+      style: "Regular",
+    },
+  ],
   variable: "--font-noto-sans-jp",
-  subsets: ["latin"],
+  display: "swap",
 });
 
-const eitaiGothicBold = EitaiGothicBold({
+const eitaiGothicBold = localFont({
   src: [
     {
       path: "../../public/fonts/KOT-Eitai Gothic Bold.ttf",
@@ -51,8 +47,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={`${eitaiGothicBold.variable}`}>
-      <body className={`${eitaiGothicBold.variable}`}>{children}</body>
+    <html lang="ja">
+      <body className={`${notoSansJP.variable} ${eitaiGothicBold.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

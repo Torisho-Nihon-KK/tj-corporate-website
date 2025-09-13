@@ -12,7 +12,7 @@ import {
 export default function Footer() {
   return (
     <footer>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-0 py-6 items-center justify-between rounded-t-2xl grid grid-cols-3 z-10 shadow-2xl relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-9 mb-0 py-6 items-center justify-between rounded-t-2xl grid grid-cols-3 z-10 shadow-xl relative overflow-hidden">
         {/* Background noise image */}
         <Image
           src="/noise.png"
@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
         <div
           className="relative z-10 grid grid-row-3 ml-auto mr-8 justify-between items-end"
-          style={{ fontFamily: "noto-sans-jp, sans-serif", fontSize: "16px" }}
+          style={{ fontSize: "16px" }}
         >
           <div>
             <div className="relative">
@@ -78,15 +78,18 @@ export default function Footer() {
                     />
                   </span>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="ml-10 p-0 border-0 shadow-lg bg-background">
+                <DropdownMenuContent
+                  side="bottom"
+                  className="ml-10 p-0 border-0 shadow-lg bg-background"
+                >
                   <DropdownMenuItem>
                     <Link href="/legal/privacy" className="block px-2 py-2">
-                      プライバシー
+                      個人情報保護方針
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
                     <Link href="/legal/terms" className="block px-2 py-2">
-                      利用規約
+                      特定商取引法に基づく表記
                     </Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>

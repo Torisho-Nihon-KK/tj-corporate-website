@@ -20,18 +20,52 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-eitai-gothic: var(--font-eitai-gothic-bold);
-  --font-noto-sans: var(--font-noto-sans-jp);
+  --font-eitai-gothic-bold: var(--font-eitai-gothic-bold);
+  --font-noto-sans-jp: var(--font-noto-sans-jp);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-eitai-gothic), sans-serif;
+  font-family: var(--font-noto-sans-jp), sans-serif;
+  font-size: 16px;
 }
 
-.font-noto-sans-jp {
-  font-family: var(--font-noto-sans), sans-serif;
+.font-primary {
+  font-family: var(--font-eitai-gothic-bold), sans-serif;
+}
+
+h1 {
+  font-size: 76px;
+  font-family: var(--font-eitai-gothic-bold), sans-serif;
+  line-height: 100%;
+}
+
+h2 {
+  font-size: 42px;
+  font-family: var(--font-eitai-gothic-bold), sans-serif;
+  line-height: 100%;
+}
+
+h3 {
+  font-size: 32px;
+  font-family: var(--font-eitai-gothic-bold), sans-serif;
+  line-height: 100%;
+}
+
+h4 {
+  font-size: 16px;
+  font-family: var(--font-noto-sans-jp), sans-serif;
+  line-height: 150%;
+}
+
+p {
+  font-size: 14px;
+  font-family: var(--font-noto-sans-jp), sans-serif;
+  line-height: 150%;
+}
+
+.dropdown {
+  font-family: var(--font-eitai-gothic-bold), sans-serif;
+  font-size: 16px;
 }

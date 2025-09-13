@@ -15,18 +15,13 @@ import {
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50">
+    <header className="sticky top-0 z-50 font-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between rounded-b-2xl">
         {/* Left: Logo + Navigation */}
         <div className="flex items-center space-x-10">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <Image
-              src="/logo.svg" // replace with your logo path
-              alt="Logo"
-              width={72}
-              height={36}
-            />
+            <Image src="/logo.svg" alt="Logo" width={72} height={36} />
           </Link>
 
           {/* Navigation */}
@@ -51,16 +46,15 @@ export default function Header() {
                     />
                   </span>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="ml-10 p-0 border-0 shadow-lg bg-background">
+                <DropdownMenuContent
+                  side="bottom"
+                  className="dropdown ml-28 p-0 border-0 shadow-lg bg-background"
+                >
                   <DropdownMenuItem>
-                    <Link href="/legal/privacy" className="block px-2 py-2">
-                      プライバシー
-                    </Link>
+                    <Link href="/legal/privacy">個人情報保護方針</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <Link href="/legal/terms" className="block px-2 py-2">
-                      利用規約
-                    </Link>
+                    <Link href="/legal/terms">特定商取引法に基づく表記</Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -71,20 +65,19 @@ export default function Header() {
         {/* Right: Language + Contact */}
         <div className="flex items-center space-x-4">
           {/* Language Switch */}
-          <Button className="bg-secondary text-secondary-foreground w-14 h-9 px-3 py-1 rounded-full font-medium">
+          <Button className=" bg-secondary text-secondary-foreground w-14 h-9 px-3 py-1 rounded-full font-medium">
             JP
           </Button>
 
           {/* Contact Button */}
-          <Link
-            href="/"
-            className="flex items-center bg-accent text-accent-foreground rounded-full"
-          >
-            <span className="rounded-full w-9 h-9 p-3 bg-white-15 flex items-center justify-center">
-              <Phone className="w-4 h-4" />
-            </span>
-            <span className="px-4 py-1">お問い合わせ</span>
-          </Link>
+          <Button className="px-0">
+            <Link href="/" className="flex items-center ">
+              <span className="rounded-full w-9 h-9 p-3 bg-white-15 flex items-center justify-center">
+                <Phone className="w-4 h-4" />
+              </span>
+              <span className="pr-4 pl-3 py-1">お問い合わせ</span>
+            </Link>
+          </Button>
         </div>
       </div>
     </header>
