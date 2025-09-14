@@ -70,9 +70,9 @@ export default function Header() {
           </Button>
 
           {/* Contact Button */}
-          <Button className="px-0">
+          <Button className="p-0.75">
             <Link href="/" className="flex items-center ">
-              <span className="rounded-full w-9 h-9 p-3 bg-white-15 flex items-center justify-center">
+              <span className="rounded-full w-8 h-8 p-3 bg-white-15 flex items-center justify-center">
                 <Phone className="w-4 h-4" />
               </span>
               <span className="pr-4 pl-3 py-1">お問い合わせ</span>

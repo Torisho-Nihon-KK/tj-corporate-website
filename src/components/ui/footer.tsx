@@ -83,12 +83,12 @@ export default function Footer() {
                   className="ml-10 p-0 border-0 shadow-lg bg-background"
                 >
                   <DropdownMenuItem>
-                    <Link href="/legal/privacy" className="block px-2 py-2">
+                    <Link href="/legal/privacy" className="block">
                       個人情報保護方針
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <Link href="/legal/terms" className="block px-2 py-2">
+                    <Link href="/legal/terms" className="block">
                       特定商取引法に基づく表記
                     </Link>
                   </DropdownMenuItem>

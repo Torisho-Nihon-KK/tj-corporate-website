@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #fcfafa;
   --foreground: #262626;
 }
 
@@ -9,6 +9,7 @@
   --color-primary: #f03240;
   --color-secondary: #f2f2f2;
   --color-accent: #f03240;
+  --color-card: #ffffff;
   --color-primary-foreground: #ffffff;
   --color-secondary-foreground: #262626;
   --color-accent-foreground: #ffffff;

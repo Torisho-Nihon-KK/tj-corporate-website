@@ -13,7 +13,7 @@ export default function HomePage() {
       <section>
         <div className="max-w-7xl mx-auto z-10 px-4 sm:px-6 lg:px-8">
           <Header />
-          <Card className="text-center">
+          <Card className="text-center p-0">
             <Image
               src="/noise.svg"
               alt=""
@@ -22,7 +22,7 @@ export default function HomePage() {
               style={{ objectPosition: "center" }}
               priority
             />
-            <CardContent>
+            <CardContent className="py-17.25">
               {/* TODO:, rename image files, and clean up*/}
               <Image
                 className="mx-auto"
@@ -40,11 +40,9 @@ export default function HomePage() {
                 <br />
                 鳥商のITアウトソーシングが、貴社の情シスとなって事業拡大をお手伝いします。
               </h4>
-              <Button className="h-10.5 px-1.5 py-4.5">
+              <Button>
                 <Link href="/" className="flex items-center ">
-                  <span className="pl-4.5 pr-2.5 x-2">
-                    お問い合わせはこちら
-                  </span>
+                  <span className="pl-4 pr-2.5 x-2">お問い合わせはこちら</span>
                   <span className="rounded-full w-8 h-8 p-0 bg-white-15 flex items-center justify-center">
                     <MoveRight className="w-4 h-4" />
                   </span>
@@ -222,9 +220,9 @@ export default function HomePage() {
 
           <div className="grid items-center my-16 gap-y-1.5">
             <Card>
-              <CardContent className="grid grid-cols-2">
-                <div className="max-w-3/5">
-                  <h3 className="pt-12.5 pb-0">ソフトウェア販売</h3>
+              <CardContent className="grid grid-cols-2 items-center">
+                <div className="max-w-3/5 ">
+                  <h3 className="p-0">ソフトウェア販売</h3>
                   <p className="pt-3 pb-0  text-justify-auto">
                     オフィスソフトからERPまで。サブスクリプション版ソフトウェアライセンスを販売しています。
                   </p>
@@ -245,9 +243,9 @@ export default function HomePage() {
               </CardContent>
             </Card>
             <Card>
-              <CardContent className="grid grid-cols-2">
+              <CardContent className="grid grid-cols-2 items-center">
                 <div className="max-w-3/5">
-                  <h3 className="pt-12.5 pb-0">ハードウェア販売</h3>
+                  <h3 className="p-0">ハードウェア販売</h3>
                   <p className="pt-3 pb-0  text-justify-auto">
                     パソコン、プリンタなどのOA機器を、競争力のあるアフターサービスを添えてお届けします。
                   </p>
@@ -268,9 +266,9 @@ export default function HomePage() {
               </CardContent>
             </Card>
             <Card>
-              <CardContent className="grid grid-cols-2">
+              <CardContent className="grid grid-cols-2 items-center">
                 <div className="max-w-3/5">
-                  <h3 className="pt-12.5 pb-0">固定回線契約取次</h3>
+                  <h3 className="p-0">固定回線契約取次</h3>
                   <p className="pt-3 pb-0  text-justify-auto">
                     当社では、NTT東日本・西日本の光コラボレーションモデルを中心に光回線の契約をお取次ぎしています。
                   </p>
@@ -293,9 +291,9 @@ export default function HomePage() {
           </div>
           <div className="my-16 align-center text-center">
             <h3 className="pb-6">ITで困ったら、いつでも呼んでください</h3>
-            <Button className="h-10.5 px-1.5 py-4.5">
+            <Button>
               <Link href="/" className="flex items-center ">
-                <span className="pl-4.5 pr-2.5 x-2">お問い合わせはこちら</span>
+                <span className="pl-4 pr-2.5 x-2">お問い合わせはこちら</span>
                 <span className="rounded-full w-8 h-8 p-0 bg-white-15 flex items-center justify-center">
                   <MoveRight className="w-4 h-4" />
                 </span>
