@@ -6,6 +6,8 @@ import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
 import Image from "next/image";
 import Link from "next/link";
+import { Heading } from "@/components/ui/heading";
+import { Text } from "@/components/ui/text";
 
 export default function HomePage() {
   return (
@@ -35,11 +37,11 @@ export default function HomePage() {
                 src="/1.svg"
                 alt="Logo"
               />
-              <h4 className="text-2xl block relative pb-6">
+              <Text className="block relative pb-6" size="md">
                 IT人材不足に、サヨナラを。
                 <br />
                 鳥商のITアウトソーシングが、貴社の情シスとなって事業拡大をお手伝いします。
-              </h4>
+              </Text>
               <Button>
                 <Link href="/" className="flex items-center ">
                   <span className="pl-4 pr-2.5 x-2">お問い合わせはこちら</span>
@@ -51,17 +53,17 @@ export default function HomePage() {
             </CardContent>
           </Card>
 
-          <Card className="grid lg:grid-cols-2 grid-cols-1 text-center relative overflow-hidden align-left items-start mx-0 p-0">
-            <CardContent>
-              <div className="align-left p-0 text-left flex items-center">
-                <Image
-                  src="/3.svg"
-                  className="inline-block p-0 pr-8"
-                  alt=""
-                  width={0}
-                  height={0}
-                  style={{ width: "auto", maxHeight: "150px" }}
-                />
+          <Card className="grid lg:grid-cols-2 grid-cols-1 text-center relative overflow-hidden align-left items-start mx-0 py-4 lg:py-0 gap-3 lg:gap-0">
+            <CardContent className="align-left p-0 text-left flex mx-auto lg:mx-0 my-auto">
+              <Image
+                src="/3.svg"
+                className="hidden p-0 pr-8 lg:inline-block"
+                alt=""
+                width={0}
+                height={0}
+                style={{ width: "auto", maxHeight: "150px" }}
+              />
+              <div className="flex items-center justify-end lg:m-auto ml-0 mr-8">
                 <Image
                   src="/4.svg"
                   alt=""
@@ -70,61 +72,56 @@ export default function HomePage() {
                   height={0}
                   style={{ width: "auto", maxHeight: "42px" }}
                 />
-                <h4 className="ml-6">力強いパートナーネットワーク</h4>
+                <Text className="ml-6">力強いパートナーネットワーク</Text>
               </div>
             </CardContent>
-            <CardContent className="lg:justify-self-end justify-self-center my-auto">
-              <div className="px-3 grid-cols-3 lg:items-right ml-auto lg:mr-2 flex gap-3 max-h-13.75">
-                <div>
-                  <Image
-                    src="/5.svg"
-                    alt="XServer Business Partner"
-                    width={0}
-                    height={0}
-                    style={{ width: "auto", maxHeight: "55px" }}
-                  />
-                </div>
-                <div>
-                  <Image
-                    src="/6.svg"
-                    alt="HP Business Partner"
-                    width={0}
-                    height={0}
-                    style={{ width: "auto", maxHeight: "55px" }}
-                  />
-                </div>
-                <div>
-                  <Image
-                    src="/6.5.svg"
-                    alt="Microsoft Partner"
-                    width={0}
-                    height={0}
-                    style={{ width: "auto", maxHeight: "55px" }}
-                  />
-                </div>
+            <CardContent className="p-0 lg:justify-self-end justify-self-center my-auto">
+              <div className="px-3 lg:items-right ml-auto lg:mr-2 flex gap-3 max-h-13.75">
+                <Image
+                  src="/5.svg"
+                  alt="XServer Business Partner"
+                  width={0}
+                  height={0}
+                  style={{ width: "auto", maxHeight: "55px" }}
+                />
+                <Image
+                  src="/6.svg"
+                  alt="HP Business Partner"
+                  width={0}
+                  height={0}
+                  style={{ width: "auto", maxHeight: "55px" }}
+                />
+                <Image
+                  src="/6.5.svg"
+                  alt="Microsoft Partner"
+                  width={0}
+                  height={0}
+                  style={{ width: "auto", maxHeight: "55px" }}
+                />
               </div>
             </CardContent>
           </Card>
           <div className="my-32"></div>
           <Card>
             <CardContent>
-              <div className="grid lg:grid-cols-2 text-left justify-center">
-                <div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 text-left justify-center">
+                <div className="mx-auto lg:mx-0 pb-3 lg:pb-0">
                   <Image
                     src="/17.svg"
                     alt="IT Outsourcing"
                     width={0}
                     height={0}
+                    className="mb-3 m-auto lg:mx-0"
                     style={{
                       width: "auto",
                       maxHeight: "38px",
                       marginRight: "auto",
                     }}
                   />
-                  <h2 className="pt-3 pb-3 lg:pb-0">情シス業務の統括代行</h2>
+                  <Heading size="md">情シス業務の統括代行</Heading>
                 </div>
 
-                <div className="px-3 grid-cols-3 ml-auto lg:mr-2 grid gap-10.5 max-h-37.5 items-center justify-self-center lg:justify-self-end lg:items-right my-auto">
+                <div className="px-3 m-auto lg:mr-2 flex gap-10.5 max-h-37.5 items-center justify-self-center lg:justify-self-end lg:items-right my-auto">
                   <div>
                     <Image
                       src="/7.svg"
@@ -171,22 +168,31 @@ export default function HomePage() {
 
           <div className="grid xl:grid-cols-3 gap-3">
             <Card>
-              <CardContent>
-                <Image
-                  src="/10.svg"
-                  alt="Cost Reduction"
-                  width={0}
-                  height={0}
-                  style={{ width: "auto", maxHeight: "200px", margin: "auto" }}
-                />
-                <h3 className="pt-12.5 pb-0">コスト削減診断</h3>
-                <p className="pt-3 pb-0  text-justify-auto">
-                  ベンダー企業との契約に含まれるパッケージが、すべて貴社にとって重要であるとは限りません。活用できていない保守契約やサブスクリプションを見直してみませんか？
-                </p>
+              <CardContent className="grid grid-cols-[80px_1fr] md:grid-cols-1 gap-6 md:gap-12.5 items-center">
+                <div className="max-w-[80px] md:max-w-[200px] m-auto">
+                  <Image
+                    src="/10.svg"
+                    alt="Cost Reduction"
+                    width={0}
+                    height={0}
+                    style={{
+                      width: "auto",
+                      maxHeight: "200px",
+                      margin: "auto",
+                    }}
+                  />
+                </div>
+                <div className="justify-end">
+                  <Heading className="pb-0">コスト削減診断</Heading>
+                  <Text className="pt-3 pb-0">
+                    ベンダー企業との契約に含まれるパッケージが、すべて貴社にとって重要であるとは限りません。活用できていない保守契約やサブスクリプションを見直してみませんか？
+                  </Text>
+                </div>
               </CardContent>
             </Card>
+
             <Card>
-              <CardContent>
+              <CardContent className="grid grid-cols-[80px_1fr] md:grid-cols-1 gap-6 md:gap-12.5 items-center">
                 <Image
                   src="/11.svg"
                   alt="Tool Selection and Implementation Support"
@@ -194,14 +200,16 @@ export default function HomePage() {
                   height={0}
                   style={{ width: "auto", maxHeight: "200px", margin: "auto" }}
                 />
-                <h3 className="pt-12.5 pb-0">ツール選定・導入支援</h3>
-                <p className="pt-3 pb-0 text-justify-auto">
-                  業務効率化に役立つシステムやソフトウェアを、貴社のご要望に見合う形で選定。経営目線と現場目線の両方の視点から、無理のない運用ができる最適なパッケージをご提案します。
-                </p>
+                <div>
+                  <Heading className="pb-0">ツール選定・導入支援</Heading>
+                  <Text className="pt-3 pb-0">
+                    業務効率化に役立つシステムやソフトウェアを、貴社のご要望に見合う形で選定。経営目線と現場目線の両方の視点から、無理のない運用ができる最適なパッケージをご提案します。
+                  </Text>
+                </div>
               </CardContent>
             </Card>
             <Card>
-              <CardContent>
+              <CardContent className="grid grid-cols-[80px_1fr] md:grid-cols-1 gap-6 md:gap-12.5 items-center">
                 <Image
                   src="/12.svg"
                   alt="Management Support"
@@ -209,10 +217,12 @@ export default function HomePage() {
                   height={0}
                   style={{ width: "auto", maxHeight: "200px", margin: "auto" }}
                 />
-                <h3 className="pt-12.5 pb-0">管理・運用支援</h3>
-                <p className="pt-3 pb-0 text-justify-auto">
-                  DX（デジタルトランスフォーメーション）は、導入することだけがゴールではありません。持続可能な運用で貴社の利益が最大化されるように、導入後もお客さまと一緒に走り続けます。
-                </p>
+                <div className="justify-end">
+                  <Heading className="pb-0">管理・運用支援</Heading>
+                  <Text className="pt-3 pb-0">
+                    DX（デジタルトランスフォーメーション）は、導入することだけがゴールではありません。持続可能な運用で貴社の利益が最大化されるように、導入後もお客さまと一緒に走り続けます。
+                  </Text>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -220,14 +230,14 @@ export default function HomePage() {
 
           <div className="grid items-center my-16 gap-y-1.5">
             <Card>
-              <CardContent className="grid grid-cols-2 items-center">
-                <div className="max-w-3/5 ">
-                  <h3 className="p-0">ソフトウェア販売</h3>
-                  <p className="pt-3 pb-0  text-justify-auto">
+              <CardContent className="flex items-center justify-left">
+                <div className="max-w-[330px] mr-auto">
+                  <Heading className="pb-3">ソフトウェア販売</Heading>
+                  <Text className="pb-0">
                     オフィスソフトからERPまで。サブスクリプション版ソフトウェアライセンスを販売しています。
-                  </p>
+                  </Text>
                 </div>
-                <div className="justify-self-end ml-auto">
+                <div className="max-w-[80px] md:max-w-[220px]">
                   <Image
                     src="/13.svg"
                     alt="ソフトウェア販売"
@@ -243,14 +253,14 @@ export default function HomePage() {
               </CardContent>
             </Card>
             <Card>
-              <CardContent className="grid grid-cols-2 items-center">
-                <div className="max-w-3/5">
-                  <h3 className="p-0">ハードウェア販売</h3>
-                  <p className="pt-3 pb-0  text-justify-auto">
+              <CardContent className="flex items-center justify-left">
+                <div className="max-w-[330px] mr-auto">
+                  <Heading className="pb-3">ハードウェア販売</Heading>
+                  <Text className="pb-0">
                     パソコン、プリンタなどのOA機器を、競争力のあるアフターサービスを添えてお届けします。
-                  </p>
+                  </Text>
                 </div>
-                <div className="justify-self-end">
+                <div className="max-w-[80px] md:max-w-[220px]">
                   <Image
                     src="/14.svg"
                     alt="ハードウェア販売"
@@ -266,14 +276,14 @@ export default function HomePage() {
               </CardContent>
             </Card>
             <Card>
-              <CardContent className="grid grid-cols-2 items-center">
-                <div className="max-w-3/5">
-                  <h3 className="p-0">固定回線契約取次</h3>
-                  <p className="pt-3 pb-0  text-justify-auto">
+              <CardContent className="flex items-center justify-left">
+                <div className="max-w-[330px] mr-auto">
+                  <Heading className="pb-3">固定回線契約取次</Heading>
+                  <Text className="pb-0">
                     当社では、NTT東日本・西日本の光コラボレーションモデルを中心に光回線の契約をお取次ぎしています。
-                  </p>
+                  </Text>
                 </div>
-                <div className="justify-self-end">
+                <div className="max-w-[80px] md:max-w-[220px]">
                   <Image
                     src="/15.svg"
                     alt="固定回線契約取次"
@@ -290,7 +300,9 @@ export default function HomePage() {
             </Card>
           </div>
           <div className="my-16 align-center text-center">
-            <h3 className="pb-6">ITで困ったら、いつでも呼んでください</h3>
+            <Heading className="pb-6">
+              ITで困ったら、いつでも呼んでください
+            </Heading>
             <Button>
               <Link href="/" className="flex items-center ">
                 <span className="pl-4 pr-2.5 x-2">お問い合わせはこちら</span>

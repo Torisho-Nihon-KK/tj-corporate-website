@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@source "../components/**/*.{ts,tsx}";
 
 :root {
   --background: #fcfafa;
@@ -23,6 +24,22 @@
 
   --font-eitai-gothic-bold: var(--font-eitai-gothic-bold);
   --font-noto-sans-jp: var(--font-noto-sans-jp);
+
+  --text-heading-mobile-lg: 28px;
+  --text-heading-mobile-md: 24px;
+  --text-heading-mobile-base: 18px;
+  --text-heading-mobile-sm: 16px;
+
+  --text-heading-lg: 76px;
+  --text-heading-md: 42px;
+  --text-heading-base: 32px;
+  --text-heading-sm: 16px;
+
+  --text-normal-md: 16px;
+  --text-normal-base: 14px;
+
+  --text-normal-mobile-md: 14px;
+  --text-normal-mobile-base: 8px;
 }
 
 body {
@@ -34,36 +51,6 @@ body {
 
 .font-primary {
   font-family: var(--font-eitai-gothic-bold), sans-serif;
-}
-
-h1 {
-  font-size: 76px;
-  font-family: var(--font-eitai-gothic-bold), sans-serif;
-  line-height: 100%;
-}
-
-h2 {
-  font-size: 42px;
-  font-family: var(--font-eitai-gothic-bold), sans-serif;
-  line-height: 100%;
-}
-
-h3 {
-  font-size: 32px;
-  font-family: var(--font-eitai-gothic-bold), sans-serif;
-  line-height: 100%;
-}
-
-h4 {
-  font-size: 16px;
-  font-family: var(--font-noto-sans-jp), sans-serif;
-  line-height: 150%;
-}
-
-p {
-  font-size: 14px;
-  font-family: var(--font-noto-sans-jp), sans-serif;
-  line-height: 150%;
 }
 
 .dropdown {

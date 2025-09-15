@@ -8,11 +8,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./dropdown-menu";
+import { Text } from "./text";
 
 export default function Footer() {
   return (
     <footer>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-9 mb-0 py-6 items-center justify-between rounded-t-2xl grid grid-cols-3 z-10 shadow-xl relative overflow-hidden">
+      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-9 mb-2 py-6 items-center justify-between rounded-t-2xl grid md:grid-cols-3 grid-cols-1 z-10 shadow-xl relative overflow-hidden">
         {/* Background noise image */}
         <Image
           src="/noise.png"
@@ -23,7 +24,7 @@ export default function Footer() {
           priority
         />
         {/* Logo Section */}
-        <div className="relative z-10">
+        <div className="relative z-10 mx-auto md:mx-0 pb-10.5 md:pb-0">
           <Image
             src="/full-logo.svg"
             alt="Torisho Logo"
@@ -55,7 +56,7 @@ export default function Footer() {
           </div>
         </div>
         <div
-          className="relative z-10 grid grid-row-3 ml-auto mr-8 justify-between items-end"
+          className="relative z-10 grid-row-3 ml-auto mr-8 justify-between items-end hidden md:grid"
           style={{ fontSize: "16px" }}
         >
           <div>
@@ -97,18 +98,17 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <span
-          className="col-span-3 flex justify-center items-center relative z-10 text-primary-muted"
-          style={{ fontFamily: "noto-sans-jp, sans-serif" }}
-        >
+        <span className="md:col-span-3 flex justify-center items-center relative z-10 text-primary-muted">
           {/* TODO: Fix the font family unable to link to top level layout. */}
           <Link
             href="/"
             className="block px-4 my-3 text-primary hover:underline"
           >
-            個人情報保護方針
+            <Text>個人情報保護方針</Text>
           </Link>
-          © 2025 鳥商日本株式会社. All rights reserved.
+          <Text className="display-inline">
+            © 2025 鳥商日本株式会社. All rights reserved.
+          </Text>
         </span>
       </div>
     </footer>
