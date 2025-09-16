@@ -13,8 +13,8 @@ export default function HomePage() {
   return (
     <main>
       <section>
+        <Header />
         <div className="max-w-7xl mx-auto z-10 px-4 sm:px-6 lg:px-8">
-          <Header />
           <Card className="text-center p-0">
             <Image
               src="/noise.svg"
