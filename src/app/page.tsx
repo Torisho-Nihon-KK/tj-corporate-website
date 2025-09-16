@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CreditCard, Database, MoveRight } from "lucide-react";
-import { Terminal } from "./terminal";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
@@ -8,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
+import Sidebar from "@/components/ui/sidebar";
 
 export default function HomePage() {
   return (
@@ -40,7 +40,9 @@ export default function HomePage() {
               <Text className="block relative pb-6" size="md">
                 IT人材不足に、サヨナラを。
                 <br />
-                鳥商のITアウトソーシングが、貴社の情シスとなって事業拡大をお手伝いします。
+                鳥商のITアウトソーシングが、貴社の情シスと
+                <br className="block md:hidden" />
+                なって事業拡大をお手伝いします。
               </Text>
               <Button>
                 <Link href="/" className="flex items-center ">
@@ -53,17 +55,17 @@ export default function HomePage() {
             </CardContent>
           </Card>
 
-          <Card className="grid lg:grid-cols-2 grid-cols-1 text-center relative overflow-hidden align-left items-start mx-0 py-4 lg:py-0 gap-3 lg:gap-0">
-            <CardContent className="align-left p-0 text-left flex mx-auto lg:mx-0 my-auto">
-              <Image
-                src="/3.svg"
-                className="hidden p-0 pr-8 lg:inline-block"
-                alt=""
-                width={0}
-                height={0}
-                style={{ width: "auto", maxHeight: "150px" }}
-              />
-              <div className="flex items-center justify-end lg:m-auto ml-0 mr-8">
+          <Card className="grid xl:grid-cols-2 grid-cols-1 text-center relative align-left mx-0 py-4 gap-3 xl:gap-0 items-center">
+            <Image
+              src="/3.svg"
+              className="absolute xl:left-0 xl:top-[-15px] xl:rotate-180 top-[-10px] right-[-78px] scale-100 xl:scale-175"
+              alt=""
+              width={0}
+              height={0}
+              style={{ width: "auto", maxHeight: "150px" }}
+            />
+            <CardContent className="px-3 p-0 flex mx-auto xl:mr-[140px] my-auto align-right justify-center xl:justify-end text-right w-full items">
+              <div className="flex items-center justify-end">
                 <Image
                   src="/4.svg"
                   alt=""
@@ -75,29 +77,50 @@ export default function HomePage() {
                 <Text className="ml-6">力強いパートナーネットワーク</Text>
               </div>
             </CardContent>
-            <CardContent className="p-0 lg:justify-self-end justify-self-center my-auto">
-              <div className="px-3 lg:items-right ml-auto lg:mr-2 flex gap-3 max-h-13.75">
-                <Image
-                  src="/5.svg"
-                  alt="XServer Business Partner"
-                  width={0}
-                  height={0}
-                  style={{ width: "auto", maxHeight: "55px" }}
-                />
-                <Image
-                  src="/6.svg"
-                  alt="HP Business Partner"
-                  width={0}
-                  height={0}
-                  style={{ width: "auto", maxHeight: "55px" }}
-                />
-                <Image
-                  src="/6.5.svg"
-                  alt="Microsoft Partner"
-                  width={0}
-                  height={0}
-                  style={{ width: "auto", maxHeight: "55px" }}
-                />
+            <CardContent className="flex gap-2 md:gap-4 justify-self-center justify-end min-h-[37px] max-h-[55px] w-auto px-3 items-center m-auto xl:mr-[40px]">
+              <div className="flex flex-1 items-center justify-center gap-4 md:gap-6 w-full h-full">
+                <div className="flex-1 min-w-0 flex items-center justify-center">
+                  <Image
+                    src="/5.svg"
+                    alt="XServer Business Partner"
+                    className="h-full max-h-[55px] w-auto flex-shrink min-w-0"
+                    width={0}
+                    height={0}
+                    style={{
+                      objectFit: "contain",
+                      maxHeight: "55px",
+                      width: "100%",
+                    }}
+                  />
+                </div>
+                <div className="flex-1 min-w-0 flex items-center justify-center">
+                  <Image
+                    src="/6.svg"
+                    alt="HP Business Partner"
+                    className="h-full max-h-[55px] w-auto flex-shrink min-w-0"
+                    width={0}
+                    height={0}
+                    style={{
+                      objectFit: "contain",
+                      maxHeight: "55px",
+                      width: "100%",
+                    }}
+                  />
+                </div>
+                <div className="flex-1 min-w-0 flex items-center justify-center">
+                  <Image
+                    src="/6.5.svg"
+                    alt="Microsoft Partner"
+                    className="h-full max-h-[55px] w-auto flex-shrink min-w-0"
+                    width={0}
+                    height={0}
+                    style={{
+                      objectFit: "contain",
+                      maxHeight: "55px",
+                      width: "100%",
+                    }}
+                  />
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -230,7 +253,7 @@ export default function HomePage() {
 
           <div className="grid items-center my-16 gap-y-1.5">
             <Card>
-              <CardContent className="flex items-center justify-left">
+              <CardContent className="flex items-center justify-left gap-6">
                 <div className="max-w-[330px] mr-auto">
                   <Heading className="pb-3">ソフトウェア販売</Heading>
                   <Text className="pb-0">
@@ -253,7 +276,7 @@ export default function HomePage() {
               </CardContent>
             </Card>
             <Card>
-              <CardContent className="flex items-center justify-left">
+              <CardContent className="flex items-center justify-left gap-6">
                 <div className="max-w-[330px] mr-auto">
                   <Heading className="pb-3">ハードウェア販売</Heading>
                   <Text className="pb-0">
@@ -276,7 +299,7 @@ export default function HomePage() {
               </CardContent>
             </Card>
             <Card>
-              <CardContent className="flex items-center justify-left">
+              <CardContent className="flex items-center justify-left gap-6">
                 <div className="max-w-[330px] mr-auto">
                   <Heading className="pb-3">固定回線契約取次</Heading>
                   <Text className="pb-0">
@@ -300,8 +323,10 @@ export default function HomePage() {
             </Card>
           </div>
           <div className="my-16 align-center text-center">
-            <Heading className="pb-6">
-              ITで困ったら、いつでも呼んでください
+            <Heading className="pb-6" mobileSize="md">
+              ITで困ったら、
+              <br className="block md:hidden" />
+              いつでも呼んでください
             </Heading>
             <Button>
               <Link href="/" className="flex items-center ">

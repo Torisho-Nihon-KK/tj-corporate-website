@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 
 interface HeadingProps {
   size?: "lg" | "md" | "base" | "sm";
+  mobileSize?: "lg" | "md" | "base" | "sm";
   className?: string;
   //   fontSize?: number;
   children: React.ReactNode;
@@ -12,6 +13,7 @@ interface HeadingProps {
 export function Heading({
   className = "",
   size = "base",
+  mobileSize,
   //   fontSize,
   children,
 }: HeadingProps) {
@@ -20,7 +22,7 @@ export function Heading({
     md: "text-heading-mobile-md",
     base: "text-heading-mobile-base",
     sm: "text-heading-mobile-sm",
-  }[size];
+  }[mobileSize ?? size];
 
   const sizeHeadingClass = {
     lg: "md:text-heading-lg",

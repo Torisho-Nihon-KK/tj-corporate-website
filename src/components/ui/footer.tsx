@@ -13,7 +13,7 @@ import { Text } from "./text";
 export default function Footer() {
   return (
     <footer>
-      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-9 mb-2 py-6 items-center justify-between rounded-t-2xl grid md:grid-cols-3 grid-cols-1 z-10 shadow-xl relative overflow-hidden">
+      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-9 mb-0 py-6 items-center justify-between rounded-t-2xl grid md:grid-cols-3 grid-cols-1 z-10 shadow-xl relative overflow-hidden">
         {/* Background noise image */}
         <Image
           src="/noise.png"

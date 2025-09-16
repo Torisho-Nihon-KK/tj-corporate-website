@@ -17,6 +17,7 @@
   --color-primary-muted: #bfbfbf;
 
   --color-white-15: rgba(255, 255, 255, 0.15);
+  --color-white-95: rgba(255, 255, 255, 0.95);
   --color-gray-15: rgba(38, 38, 38, 0.15);
 
   --color-background: var(--background);
@@ -25,12 +26,10 @@
   --font-eitai-gothic-bold: var(--font-eitai-gothic-bold);
   --font-noto-sans-jp: var(--font-noto-sans-jp);
 
-  --text-heading-mobile-lg: 28px;
-  --text-heading-mobile-md: 24px;
+  --text-heading-mobile-md: 28px;
   --text-heading-mobile-base: 18px;
   --text-heading-mobile-sm: 16px;
 
-  --text-heading-lg: 76px;
   --text-heading-md: 42px;
   --text-heading-base: 32px;
   --text-heading-sm: 16px;
@@ -39,7 +38,7 @@
   --text-normal-base: 14px;
 
   --text-normal-mobile-md: 14px;
-  --text-normal-mobile-base: 8px;
+  --text-normal-mobile-base: 12px;
 }
 
 body {
