@@ -1,19 +1,18 @@
 import Link from "next/link";
 import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 import Image from "next/image";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "./dropdown-menu";
-import { Text } from "./text";
+} from "../ui/dropdown-menu";
+import { Text } from "../ui/text";
 
 export default function Footer() {
   return (
-    <footer>
-      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-9 mb-0 py-6 items-center justify-between rounded-t-2xl grid md:grid-cols-3 grid-cols-1 z-10 shadow-xl relative overflow-hidden">
+    <footer className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+      <div className="px-[64px] pt-[42px] mt-9 mb-0 py-6 items-center justify-between rounded-t-2xl grid md:grid-cols-3 grid-cols-1 z-10 shadow-xl relative overflow-hidden">
         {/* Background noise image */}
         <Image
           src="/noise.png"
@@ -84,12 +83,12 @@ export default function Footer() {
                   className="ml-10 p-0 border-0 shadow-lg bg-background"
                 >
                   <DropdownMenuItem>
-                    <Link href="/legal/privacy" className="block">
+                    <Link href="/privacy" className="block">
                       個人情報保護方針
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <Link href="/legal/terms" className="block">
+                    <Link href="/legal-sct" className="block">
                       特定商取引法に基づく表記
                     </Link>
                   </DropdownMenuItem>

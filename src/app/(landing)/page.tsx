@@ -1,20 +1,21 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, CreditCard, Database, MoveRight } from "lucide-react";
+import Header from "@/components/common/header";
+import Footer from "@/components/common/footer";
+import SiteContent from "@/components/common/site-content";
+
+import { MoveRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import Header from "@/components/ui/header";
-import Footer from "@/components/ui/footer";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
-import Sidebar from "@/components/ui/sidebar";
 
-export default function HomePage() {
+export default function LandingPage() {
   return (
     <main>
       <section>
         <Header />
-        <div className="max-w-7xl mx-auto z-10 px-4 sm:px-6 lg:px-8">
+        <SiteContent>
           <Card className="text-center p-0">
             <Image
               src="/noise.svg"
@@ -34,8 +35,8 @@ export default function HomePage() {
                 }}
                 width={0}
                 height={0}
-                src="/1.svg"
-                alt="Logo"
+                src="/hero.svg"
+                alt="Hero Image"
               />
               <Text className="block relative pb-6" size="md">
                 IT人材不足に、サヨナラを。
@@ -57,7 +58,7 @@ export default function HomePage() {
 
           <Card className="grid xl:grid-cols-2 grid-cols-1 text-center relative align-left mx-0 py-4 gap-3 xl:gap-0 items-center">
             <Image
-              src="/3.svg"
+              src="/tree.svg"
               className="absolute xl:left-0 xl:top-[-15px] xl:rotate-180 top-[-10px] right-[-78px] scale-100 xl:scale-175"
               alt=""
               width={0}
@@ -67,7 +68,7 @@ export default function HomePage() {
             <CardContent className="px-3 p-0 flex mx-auto xl:mr-[140px] my-auto align-right justify-center xl:justify-end text-right w-full items">
               <div className="flex items-center justify-end">
                 <Image
-                  src="/4.svg"
+                  src="/smiley-face.svg"
                   alt=""
                   className="inline-block"
                   width={0}
@@ -81,7 +82,7 @@ export default function HomePage() {
               <div className="flex flex-1 items-center justify-center gap-4 md:gap-6 w-full h-full">
                 <div className="flex-1 min-w-0 flex items-center justify-center">
                   <Image
-                    src="/5.svg"
+                    src="/partner-xserver.svg"
                     alt="XServer Business Partner"
                     className="h-full max-h-[55px] w-auto flex-shrink min-w-0"
                     width={0}
@@ -95,7 +96,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex-1 min-w-0 flex items-center justify-center">
                   <Image
-                    src="/6.svg"
+                    src="/partner-hp.svg"
                     alt="HP Business Partner"
                     className="h-full max-h-[55px] w-auto flex-shrink min-w-0"
                     width={0}
@@ -109,7 +110,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex-1 min-w-0 flex items-center justify-center">
                   <Image
-                    src="/6.5.svg"
+                    src="/partner-microsoft.svg"
                     alt="Microsoft Partner"
                     className="h-full max-h-[55px] w-auto flex-shrink min-w-0"
                     width={0}
@@ -130,8 +131,8 @@ export default function HomePage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 text-left justify-center">
                 <div className="mx-auto lg:mx-0 pb-3 lg:pb-0">
                   <Image
-                    src="/17.svg"
-                    alt="IT Outsourcing"
+                    src="/1-header.svg"
+                    alt="鳥商ができること"
                     width={0}
                     height={0}
                     className="mb-3 m-auto lg:mx-0"
@@ -147,7 +148,7 @@ export default function HomePage() {
                 <div className="px-3 m-auto lg:mr-2 flex gap-10.5 max-h-37.5 items-center justify-self-center lg:justify-self-end lg:items-right my-auto">
                   <div>
                     <Image
-                      src="/7.svg"
+                      src="/1-1.svg"
                       alt=""
                       width={0}
                       height={0}
@@ -160,7 +161,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <Image
-                      src="/8.svg"
+                      src="/1-2.svg"
                       alt=""
                       width={0}
                       height={0}
@@ -173,7 +174,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <Image
-                      src="/9.svg"
+                      src="/1-3.svg"
                       alt=""
                       width={0}
                       height={0}
@@ -194,8 +195,8 @@ export default function HomePage() {
               <CardContent className="grid grid-cols-[80px_1fr] md:grid-cols-1 gap-6 md:gap-12.5 items-center">
                 <div className="max-w-[80px] md:max-w-[200px] m-auto">
                   <Image
-                    src="/10.svg"
-                    alt="Cost Reduction"
+                    src="/2-1.svg"
+                    alt="コスト削減診断"
                     width={0}
                     height={0}
                     style={{
@@ -217,8 +218,8 @@ export default function HomePage() {
             <Card>
               <CardContent className="grid grid-cols-[80px_1fr] md:grid-cols-1 gap-6 md:gap-12.5 items-center">
                 <Image
-                  src="/11.svg"
-                  alt="Tool Selection and Implementation Support"
+                  src="/2-2.svg"
+                  alt="ツール選定・導入支援"
                   width={0}
                   height={0}
                   style={{ width: "auto", maxHeight: "200px", margin: "auto" }}
@@ -234,8 +235,8 @@ export default function HomePage() {
             <Card>
               <CardContent className="grid grid-cols-[80px_1fr] md:grid-cols-1 gap-6 md:gap-12.5 items-center">
                 <Image
-                  src="/12.svg"
-                  alt="Management Support"
+                  src="/2-3.svg"
+                  alt="管理・運用支援"
                   width={0}
                   height={0}
                   style={{ width: "auto", maxHeight: "200px", margin: "auto" }}
@@ -262,7 +263,7 @@ export default function HomePage() {
                 </div>
                 <div className="max-w-[80px] md:max-w-[220px]">
                   <Image
-                    src="/13.svg"
+                    src="/3-1.svg"
                     alt="ソフトウェア販売"
                     width={0}
                     height={0}
@@ -285,7 +286,7 @@ export default function HomePage() {
                 </div>
                 <div className="max-w-[80px] md:max-w-[220px]">
                   <Image
-                    src="/14.svg"
+                    src="/3-2.svg"
                     alt="ハードウェア販売"
                     width={0}
                     height={0}
@@ -308,7 +309,7 @@ export default function HomePage() {
                 </div>
                 <div className="max-w-[80px] md:max-w-[220px]">
                   <Image
-                    src="/15.svg"
+                    src="/3-3.svg"
                     alt="固定回線契約取次"
                     width={0}
                     height={0}
@@ -337,8 +338,8 @@ export default function HomePage() {
               </Link>
             </Button>
           </div>
-          <Footer />
-        </div>
+        </SiteContent>
+        <Footer />
       </section>
     </main>
   );

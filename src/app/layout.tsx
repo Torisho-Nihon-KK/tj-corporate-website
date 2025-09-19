@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
-import Image from "next/image";
-import Logo from "../../public/logo.svg";
 import "./globals.css";
-import { Button } from "@/components/ui/button";
 // import { Suspense } from "react";
 // import { UserMenu } from "@/components/user-menu";
-import Link from "next/link";
-import { type ClassValue } from "clsx";
-import Header from "@/components/ui/header";
 
 const notoSansJP = localFont({
   src: [
