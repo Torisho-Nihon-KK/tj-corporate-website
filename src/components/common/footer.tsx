@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="px-[64px] pt-[42px] mt-9 mb-0 py-6 items-center justify-between rounded-t-2xl grid md:grid-cols-3 grid-cols-1 z-10 shadow-xl relative overflow-hidden">
         {/* Background noise image */}
         <Image
-          src="/noise.png"
+          src="/noise.svg"
           alt=""
           fill
           className="pointer-events-none select-none object-cover opacity-100 z-0"
