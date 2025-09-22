@@ -4,12 +4,6 @@ import SiteContent from "@/components/common/site-content";
 import { strapi } from "@strapi/client";
 // Documentation: https://docs.strapi.io/cms/api/client
 
-if (!process.env.STRAPI_API_URL || !process.env.STRAPI_API_TOKEN) {
-  throw new Error(
-    "STRAPI_API_URL and STRAPI_API_TOKEN must be defined in environment variables."
-  );
-}
-
 const client = strapi({
   baseURL: process.env.STRAPI_API_URL as string,
   auth: process.env.STRAPI_API_TOKEN as string,

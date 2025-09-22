@@ -8,12 +8,6 @@ import { Card, CardContent } from "@/components/ui/card";
 export default async function Article({ params }: { params: { id: string } }) {
   const documentId = params.id;
 
-  if (!process.env.STRAPI_API_URL || !process.env.STRAPI_API_TOKEN) {
-    throw new Error(
-      "STRAPI_API_URL and STRAPI_API_TOKEN must be defined in environment variables."
-    );
-  }
-
   const client = strapi({
     baseURL: process.env.STRAPI_API_URL as string,
     auth: process.env.STRAPI_API_TOKEN as string,
