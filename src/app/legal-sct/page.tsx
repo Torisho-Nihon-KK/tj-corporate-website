@@ -15,8 +15,8 @@ export default function Legal() {
         <Header />
         <SiteContent>
           <Card>
-            <CardContent>
-              <Heading size="md" className="mb-8">
+            <CardContent className="p-12">
+              <Heading size="md" className="pb-8">
                 特定商取引法に基づく表記
               </Heading>
               <table className="w-full table-auto border items-center text-align-left vertical-align-middle legal">

@@ -14,8 +14,10 @@ export default function Privacy() {
         <Header />
         <SiteContent>
           <Card>
-            <CardContent>
-              <Heading size="md">個人情報の取り扱いに関する同意書</Heading>
+            <CardContent className="p-12">
+              <Heading size="md" className="pb-8">
+                個人情報保護方針
+              </Heading>
               <Text className="mt-4 mb-4">
                 鳥商日本株式会社（以下、「当社」）は、個人情報保護法およびその他の法令の定めに基づき、当社から商品および役務の提供を受けるお客さまの個人情報について、個人の人格尊重の理念のもとに慎重にかつ善良なる管理者の注意義務をもって適正な取り扱いに努めています。
               </Text>
@@ -63,7 +65,7 @@ export default function Privacy() {
               <Text>
                 当社は、下記に定める場合を除き、個人情報を第三者に提供することはありません。
               </Text>
-              <List>
+              <List ordered>
                 <ListItem>本人の同意がある場合</ListItem>
                 <ListItem>
                   当社の業務委託先に対し、利用目的の達成に必要な範囲で提供する場合（この場合、当社は委託先と秘密保持契約を締結し、当該委託先が本書と同等以上の取り扱いを履行するよう適切な監督を行います。）
