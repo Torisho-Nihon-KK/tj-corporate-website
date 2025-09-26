@@ -57,3 +57,13 @@ body {
   font-family: var(--font-eitai-gothic-bold), sans-serif;
   font-size: 16px;
 }
+
+.legal th {
+  @apply text-left p-2 border items-center;
+  vertical-align: center;
+}
+
+.legal td {
+  @apply p-2 border;
+  vertical-align: center;
+}
