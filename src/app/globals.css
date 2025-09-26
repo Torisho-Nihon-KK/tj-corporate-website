@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @source "../components/**/*.{ts,tsx}";
+@import "react-phone-number-input/style.css";
 
 :root {
   --background: #fcfafa;
