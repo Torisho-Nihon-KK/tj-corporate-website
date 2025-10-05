@@ -23,9 +23,9 @@ export default function TopArticle({
 }: TopArticleProps) {
     return (
         <div
-            className={`grid grid-cols-[2fr_1fr] gap-[75px] items-center ${className}`}
+            className={`grid grid-cols-3 gap-[42px] items-center ${className}`}
         >
-            <Card className="m-0 h-[400px]">
+            <Card className="m-0 h-[400px] col-span-2">
                 <CardContent className="p-12">Image goes here</CardContent>
             </Card>
             <div className="flex flex-col gap-3">
