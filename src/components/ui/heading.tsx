@@ -7,6 +7,7 @@ interface HeadingProps {
     mobileSize?: "lg" | "md" | "base" | "sm";
     className?: string;
     //   fontSize?: number;
+    lineHeight?: number; // in percentage, e.g., 100%
     children: React.ReactNode;
 }
 
@@ -15,6 +16,7 @@ export function Heading({
     size = "base",
     mobileSize,
     //   fontSize,
+    lineHeight = 100,
     children,
 }: HeadingProps) {
     const sizeHeadingMobileClass = {
@@ -31,20 +33,20 @@ export function Heading({
         sm: "md:text-heading-sm",
     }[size];
 
-    const lineHeight = "leading-[100%]";
+    const lineHeightClass = `leading-[${lineHeight}%]`;
     const classNames = className;
 
     return (
-        <p
+        <h3
             className={cn(
                 "font-primary",
                 sizeHeadingClass,
                 sizeHeadingMobileClass,
-                classNames,
-                lineHeight
+                lineHeightClass,
+                classNames
             )}
         >
             {children}
-        </p>
+        </h3>
     );
 }
