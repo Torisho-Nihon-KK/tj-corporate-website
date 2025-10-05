@@ -1,9 +1,11 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+This project is currently working on progress.
+
 ## Getting Started
 
 ```bash
-git clone https://github.com/Torisho-Nihon-KK/tj-corporate
+git clone https://github.com/Torisho-Nihon-KK/tj-corporate-website
 cd tj-corporate
 
 npm install # Or use any package manager of your choice.
