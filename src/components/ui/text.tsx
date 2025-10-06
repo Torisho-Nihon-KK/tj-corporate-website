@@ -5,14 +5,14 @@ import { cn } from "@/lib/utils";
 interface TextProps {
     size?: "md" | "base" | "lg";
     className?: string;
-    // fontSize?: number;
+    fontSize?: number;
     children: React.ReactNode;
 }
 
 export function Text({
     className = "",
     size = "base",
-    //   fontSize,
+    fontSize,
     children,
 }: TextProps) {
     const sizeNormalMobileClass = {
@@ -39,6 +39,7 @@ export function Text({
                 classNames,
                 lineHeight
             )}
+            style={fontSize ? { fontSize: `${fontSize}px` } : {}}
         >
             {children}
         </p>

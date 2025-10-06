@@ -4,7 +4,6 @@ import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 import { Card, CardContent } from "@/components/ui/card";
 import CardWithCaption from "./card-with-caption";
-import Head from "next/head";
 import CallToAction from "../(landing)/call-to-action";
 import { CTAButton } from "@/components/ui/cta-button";
 
@@ -133,10 +132,80 @@ export default function ServicesPage() {
             <Heading className="mt-[144px] mb-[50px]" size="xl">
                 ハードウェア販売
             </Heading>
+            <div className="flex flex-row gap-6 items-center">
+                <Card className="w-[16.67%] h-[312px]">
+                    <CardContent className="p-0 overflow-hidden">
+                        <Image
+                            src={"/services/PS5-Photoroom.png"}
+                            alt="Desktop"
+                            width={415}
+                            height={353}
+                            className="top-[100px]"
+                            style={{
+                                position: "absolute",
+                                scale: "2",
+                            }}
+                        />
+                    </CardContent>
+                </Card>
+                <Card className="w-[41.67%] h-[312px]">
+                    <CardContent className="p-0 overflow-hidden">
+                        <Image
+                            src={"/services/Laptop-Photoroom.png"}
+                            alt="Laptop"
+                            width={529}
+                            height={449}
+                            style={{
+                                position: "absolute",
+                            }}
+                        />
+                    </CardContent>
+                </Card>
+                <div className="ml-[26px] w-[41.67%]">
+                    <Text fontSize={20}>
+                        当社は日本HP（ヒューレット・パッカード）社正規販売代理店として、法人向けHPデスクトップPC・ノートパソコン・ワークステーションを取り扱っております。
+                    </Text>
+                </div>
+            </div>
 
             <Heading className="mt-[144px] mb-[50px]" size="xl">
                 固定回線契約取次
             </Heading>
+
+            <div className="grid grid-cols-[45%_55%] h-[600px] gap-8">
+                <div className="relative overflow-hidden bg-white rounded-2xl p-6 pt-[42px]">
+                    <Text fontSize={82} className="relative font-semibold z-20">
+                        月々4,180円~
+                    </Text>
+                    <Image
+                        src={"/services/map.svg"}
+                        alt="Map"
+                        width={0}
+                        height={0}
+                        className="left-[25%] top-[30%]"
+                        style={{
+                            width: "100%",
+                            height: "auto",
+                            scale: "1.5",
+                            position: "relative",
+                        }}
+                    />
+                    {/* Fade */}
+                    <div className="pointer-events-none absolute z-10 bottom-0 left-0 h-48 w-full bg-gradient-to-t from-white to-transparent"></div>
+                    <div className="pointer-events-none absolute z-10 top-0 right-0 h-full w-24 bg-gradient-to-l from-white to-transparent"></div>
+                </div>
+                <div>
+                    <Text fontSize={20}>
+                        法人契約・個人事業主契約や、口座振替といった柔軟な契約オプションがあるプロバイダの光回線を、月々4,180円※からご利用いただけます。東京都板橋区・練馬区・北区のお客様限定で、訪問設定サービスもご提供しております。{" "}
+                    </Text>
+                    <Text
+                        fontSize={14}
+                        className="mt-[55px] text-primary-muted"
+                    >
+                        ※マンションタイプ・2年契約プランで当社が取次可能なプロバイダの最安値です。
+                    </Text>
+                </div>
+            </div>
 
             <CallToAction />
         </SiteContent>
