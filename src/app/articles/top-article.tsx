@@ -1,4 +1,3 @@
-import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 import { Heading } from "../../components/ui/heading";
 import { Text } from "../../components/ui/text";
@@ -38,7 +37,7 @@ export default function TopArticle({
                     </Text>
                 </div>
                 <div>
-                    <Heading lineHeight={120}>{title}</Heading>
+                    <Heading lineHeight={1.2}>{title}</Heading>
                 </div>
                 <div>
                     <Text>{description}</Text>

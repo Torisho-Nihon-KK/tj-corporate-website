@@ -58,16 +58,16 @@ export default function Header() {
                                         side="bottom"
                                         className="dropdown ml-28 p-0 border-0 shadow-lg bg-background"
                                     >
-                                        <DropdownMenuItem>
-                                            <Link href="/privacy">
+                                        <Link href="/privacy">
+                                            <DropdownMenuItem>
                                                 個人情報保護方針
-                                            </Link>
-                                        </DropdownMenuItem>
-                                        <DropdownMenuItem>
-                                            <Link href="/legal-sct">
+                                            </DropdownMenuItem>
+                                        </Link>
+                                        <Link href="/legal-sct">
+                                            <DropdownMenuItem>
                                                 特定商取引法に基づく表記
-                                            </Link>
-                                        </DropdownMenuItem>
+                                            </DropdownMenuItem>
+                                        </Link>
                                     </DropdownMenuContent>
                                 </DropdownMenu>
                             </div>
@@ -82,16 +82,16 @@ export default function Header() {
                         </Button>
 
                         {/* Contact Button */}
-                        <Button className="p-0.75 hidden md:flex">
-                            <Link href="/" className="flex items-center ">
+                        <Link href="/contact" className="flex items-center ">
+                            <Button className="p-0.75 hidden md:flex">
                                 <span className="rounded-full w-8 h-8 p-3 bg-white-15 flex items-center justify-center">
                                     <Phone className="w-4 h-4" />
                                 </span>
                                 <span className="pr-4 pl-3 py-1">
                                     お問い合わせ
                                 </span>
-                            </Link>
-                        </Button>
+                            </Button>
+                        </Link>
                     </div>
                 </div>
 

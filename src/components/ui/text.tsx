@@ -3,9 +3,9 @@
 import { cn } from "@/lib/utils";
 
 interface TextProps {
-    size?: "md" | "base";
+    size?: "md" | "base" | "lg";
     className?: string;
-    //   fontSize?: number;
+    // fontSize?: number;
     children: React.ReactNode;
 }
 
@@ -16,11 +16,13 @@ export function Text({
     children,
 }: TextProps) {
     const sizeNormalMobileClass = {
+        lg: "text-normal-mobile-lg",
         md: "text-normal-mobile-md",
         base: "text-normal-mobile-base",
     }[size];
 
     const sizeNormalClass = {
+        lg: "md:text-normal-lg",
         md: "md:text-normal-md",
         base: "md:text-normal-base",
     }[size];

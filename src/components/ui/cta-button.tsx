@@ -19,7 +19,7 @@ function CTAButtonSecondary({ children }: { children: React.ReactNode }) {
     return (
         <Link
             href="/"
-            className="text-primary font-primary flex items-center w-fit"
+            className="text-primary font-primary flex items-center w-fit onhover:underline"
         >
             <span className="pr-2.5">{children}</span>
             <MoveRight className="w-4 h-4" />

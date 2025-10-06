@@ -2,12 +2,18 @@
 
 import { cn } from "@/lib/utils";
 
+/**
+ * Heading component.
+ * @param {size} size - The size of the heading.
+ * @param {mobileSize} mobileSize - The size of the heading on mobile devices.
+ * @param {className} className - Additional CSS classes.
+ * @param {lineHeight} lineHeight - The line height of the heading. Default is 1.
+ */
 interface HeadingProps {
     size?: "lg" | "md" | "base" | "sm";
     mobileSize?: "lg" | "md" | "base" | "sm";
     className?: string;
-    //   fontSize?: number;
-    lineHeight?: number; // in percentage, e.g., 100%
+    lineHeight?: number;
     children: React.ReactNode;
 }
 
@@ -16,7 +22,7 @@ export function Heading({
     size = "base",
     mobileSize,
     //   fontSize,
-    lineHeight = 100,
+    lineHeight = 1,
     children,
 }: HeadingProps) {
     const sizeHeadingMobileClass = {
@@ -33,18 +39,17 @@ export function Heading({
         sm: "md:text-heading-sm",
     }[size];
 
-    const lineHeightClass = `leading-[${lineHeight}%]`;
     const classNames = className;
 
     return (
         <h3
             className={cn(
-                "font-primary",
                 sizeHeadingClass,
                 sizeHeadingMobileClass,
-                lineHeightClass,
+                "font-primary",
                 classNames
             )}
+            style={{ lineHeight: lineHeight }}
         >
             {children}
         </h3>

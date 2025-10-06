@@ -16,6 +16,7 @@
     --color-secondary-foreground: #262626;
     --color-accent-foreground: #ffffff;
     --color-primary-muted: #bfbfbf;
+    --color-inactive: #f2f2f2;
 
     --color-white-15: rgba(255, 255, 255, 0.15);
     --color-white-95: rgba(255, 255, 255, 0.95);
@@ -35,9 +36,11 @@
     --text-heading-base: 32px;
     --text-heading-sm: 16px;
 
+    --text-normal-lg: 24px;
     --text-normal-md: 16px;
     --text-normal-base: 14px;
 
+    --text-normal-mobile-lg: 16px;
     --text-normal-mobile-md: 14px;
     --text-normal-mobile-base: 12px;
 }

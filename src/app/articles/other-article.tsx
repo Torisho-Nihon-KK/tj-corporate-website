@@ -36,7 +36,7 @@ export default function Article({
                     </Text>
                 </div>
                 <div>
-                    <Heading lineHeight={120}>{title}</Heading>
+                    <Heading lineHeight={1.2}>{title}</Heading>
                 </div>
                 <div>
                     <Text>{description}</Text>
