@@ -172,7 +172,7 @@ export default function ServicesPage() {
                 固定回線契約取次
             </Heading>
 
-            <div className="grid grid-cols-[45%_55%] h-[600px] gap-8">
+            <div className="grid grid-cols-[45%_52%] h-[600px] gap-[3%]">
                 <div className="relative overflow-hidden bg-white rounded-2xl p-6 pt-[42px]">
                     <Text fontSize={82} className="relative font-semibold z-20">
                         月々4,180円~
@@ -194,7 +194,7 @@ export default function ServicesPage() {
                     <div className="pointer-events-none absolute z-10 bottom-0 left-0 h-48 w-full bg-gradient-to-t from-white to-transparent"></div>
                     <div className="pointer-events-none absolute z-10 top-0 right-0 h-full w-24 bg-gradient-to-l from-white to-transparent"></div>
                 </div>
-                <div>
+                <div className=" justify-end">
                     <Text fontSize={20}>
                         法人契約・個人事業主契約や、口座振替といった柔軟な契約オプションがあるプロバイダの光回線を、月々4,180円※からご利用いただけます。東京都板橋区・練馬区・北区のお客様限定で、訪問設定サービスもご提供しております。{" "}
                     </Text>

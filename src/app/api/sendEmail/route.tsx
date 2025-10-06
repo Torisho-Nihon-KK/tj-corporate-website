@@ -1,11 +1,15 @@
 import { type NextRequest, NextResponse } from "next/server";
 import sgMail from "@sendgrid/mail";
 
-type RequestData = {
-    name: string;
-    email: string;
+type ContactFormData = {
+    firstName: string;
+    lastName: string;
+    companyName: string;
     phoneNumber: string;
+    email: string;
     message: string;
+    communication: boolean;
+    consent: boolean;
 };
 
 type EmailData = {
@@ -16,7 +20,7 @@ type EmailData = {
 };
 
 export async function POST(request: NextRequest) {
-    let requestData: RequestData;
+    let requestData: ContactFormData;
 
     try {
         requestData = await request.json();
@@ -26,11 +30,16 @@ export async function POST(request: NextRequest) {
             { status: 400 }
         );
     }
+
+    // TODO: DATA VALIDATION
+
     if (
-        !requestData.name ||
+        !requestData.firstName ||
+        !requestData.lastName ||
+        !requestData.companyName ||
+        !requestData.message ||
         !requestData.email ||
-        !requestData.phoneNumber ||
-        !requestData.message
+        !requestData.consent
     ) {
         return NextResponse.json(
             { message: "Missing required fields." },
@@ -54,7 +63,7 @@ export async function GET() {
     );
 }
 
-async function sendEmail(requestData: RequestData) {
+async function sendEmail(requestData: ContactFormData) {
     console.log("Sending email with data:", requestData);
 
     const msg = {
@@ -63,7 +72,7 @@ async function sendEmail(requestData: RequestData) {
         subject: "Test Email from SendGrid",
         //text: request.content,
         html:
-            "This is the first email sent with SendGrid. Also the json of the request is: " +
+            "Another email has been received. The json of the request is: " +
             JSON.stringify(requestData),
     };
 
