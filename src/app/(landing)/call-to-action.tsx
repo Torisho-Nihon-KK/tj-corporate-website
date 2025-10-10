@@ -16,7 +16,7 @@ export default function CallToAction({
                 いつでも呼んでください
             </Heading>
             <Button>
-                <Link href="/" className="flex items-center ">
+                <Link href="/contact" className="flex items-center ">
                     <span className="pl-4 pr-2.5 x-2">
                         お問い合わせはこちら
                     </span>

@@ -17,7 +17,7 @@ export default function Sidebar({ open, onClose }) {
             </span>
             <nav className="flex flex-col space-y-4 p-6 bg-background">
                 <Link href="/">ホーム</Link>
-                <Link href="/">サービス</Link>
+                <Link href="/services">サービス</Link>
                 <Link href="/privacy">個人情報保護方針</Link>
                 <Link href="/legal-sct">特定商取引法に基づく表記</Link>
             </nav>

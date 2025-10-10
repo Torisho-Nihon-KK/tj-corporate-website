@@ -37,7 +37,7 @@ export default function Header() {
                             <Link href="/" className="">
                                 ホーム
                             </Link>
-                            <Link href="/" className="">
+                            <Link href="/services" className="">
                                 サービス
                             </Link>
 

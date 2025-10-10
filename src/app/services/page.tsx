@@ -100,7 +100,7 @@ export default function ServicesPage() {
                             365 / Office
                             365のライセンスの販売だけでなく、導入サポートもご提供します。
                         </Text>
-                        <CTAButton>Xserver レンタルサーバー</CTAButton>
+                        <CTAButton href="/contact">お見積はこちら</CTAButton>
                     </CardContent>
                 </Card>
                 <Card>
@@ -122,8 +122,12 @@ export default function ServicesPage() {
                             レンタルサーバー・VPSの販売取次を行っております。
                         </Text>
                         <div className="flex gap-3">
-                            <CTAButton>Xserver レンタルサーバー</CTAButton>
-                            <CTAButton>Xserver VPS</CTAButton>
+                            <CTAButton href="https://www.xserver.ne.jp/agency_via/?cd=XAYYVG&type=server">
+                                Xserver レンタルサーバー
+                            </CTAButton>
+                            <CTAButton href="https://vps.xserver.ne.jp/agency_via/?cd=XAYYVG&type=xvps">
+                                Xserver VPS
+                            </CTAButton>
                         </div>
                     </CardContent>
                 </Card>

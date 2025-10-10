@@ -9,6 +9,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
+import { CTAButton } from "@/components/ui/cta-button";
 
 export default function LandingPage() {
     return (
@@ -42,16 +43,7 @@ export default function LandingPage() {
                         <br className="block md:hidden" />
                         なって事業拡大をお手伝いします。
                     </Text>
-                    <Button>
-                        <Link href="/" className="flex items-center ">
-                            <span className="pl-4 pr-2.5 x-2">
-                                お問い合わせはこちら
-                            </span>
-                            <span className="rounded-full w-8 h-8 p-0 bg-white-15 flex items-center justify-center">
-                                <MoveRight className="w-4 h-4" />
-                            </span>
-                        </Link>
-                    </Button>
+                    <CTAButton href="/contact">お問い合わせはこちら</CTAButton>
                 </CardContent>
             </Card>
 

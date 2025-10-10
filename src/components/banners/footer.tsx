@@ -34,19 +34,28 @@ export default function Footer() {
                 <div className="items-center mx-auto relative z-10">
                     {/* Social Media Icons */}
                     <div className="flex space-x-6 text-primary-muted md:items-center">
-                        <Link href="https://instagram.com" target="_blank">
+                        <Link
+                            href="https://www.instagram.com/torishojp/"
+                            target="_blank"
+                        >
                             <FaInstagram
                                 size={24}
                                 className="hover:text-red-500 transition"
                             />
                         </Link>
-                        <Link href="https://linkedin.com" target="_blank">
+                        <Link
+                            href="https://www.linkedin.com/company/99918622/"
+                            target="_blank"
+                        >
                             <FaLinkedin
                                 size={24}
                                 className="hover:text-blue-600 transition"
                             />
                         </Link>
-                        <Link href="https://facebook.com" target="_blank">
+                        <Link
+                            href="https://www.facebook.com/torishojp"
+                            target="_blank"
+                        >
                             <FaFacebook
                                 size={24}
                                 className="hover:text-blue-500 transition"
