@@ -1,4 +1,3 @@
-import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 import { Heading } from "../../components/ui/heading";
 import { Text } from "../../components/ui/text";
@@ -28,7 +27,7 @@ export default function Article({
             </Card>
             <div className="flex flex-col gap-3">
                 <div className="flex items-center">
-                    <Text className="bg-secondary px-[10px] py-1 rounded-full mr-2">
+                    <Text className="bg-secondary px-[10px] py-1 rounded-full mr-2 ">
                         {authorName} 書
                     </Text>
                     <Text>

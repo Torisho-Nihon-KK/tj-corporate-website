@@ -1,12 +1,7 @@
-import Header from "@/components/banners/header";
-import Footer from "@/components/banners/footer";
 import SiteContent from "@/components/common/site-content";
 
-import { MoveRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 import { CTAButton } from "@/components/ui/cta-button";

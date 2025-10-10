@@ -1,5 +1,3 @@
-import Header from "@/components/banners/header";
-import Footer from "@/components/banners/footer";
 import SiteContent from "@/components/common/site-content";
 
 import { Card, CardContent } from "@/components/ui/card";

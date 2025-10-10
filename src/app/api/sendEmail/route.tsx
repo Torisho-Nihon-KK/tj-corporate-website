@@ -14,12 +14,12 @@ type ContactFormData = {
     turnstile: string;
 };
 
-type EmailData = {
-    to: string;
-    from: string;
-    subject: string;
-    html: string;
-};
+// type EmailData = {
+//     to: string;
+//     from: string;
+//     subject: string;
+//     html: string;
+// };
 
 const verifyEndpoint =
     "https://challenges.cloudflare.com/turnstile/v0/siteverify";
@@ -30,9 +30,9 @@ export async function POST(request: NextRequest) {
 
     try {
         requestData = await request.json();
-    } catch (error) {
+    } catch {
         return NextResponse.json(
-            { message: "Invalid JSON data." },
+            { message: "Invalid JSON data:" },
             { status: 400 }
         );
     }

@@ -7,7 +7,6 @@ import CardWithCaption from "./card-with-caption";
 import CallToAction from "../(landing)/call-to-action";
 import { CTAButton } from "@/components/ui/cta-button";
 import { Underline } from "@/components/ui/underline";
-import Head from "next/head";
 
 export default function ServicesPage() {
     return (
