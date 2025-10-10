@@ -6,6 +6,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import CardWithCaption from "./card-with-caption";
 import CallToAction from "../(landing)/call-to-action";
 import { CTAButton } from "@/components/ui/cta-button";
+import { Underline } from "@/components/ui/underline";
+import Head from "next/head";
 
 export default function ServicesPage() {
     return (
@@ -25,11 +27,15 @@ export default function ServicesPage() {
                     />
                 </div>
                 <div className="flex flex-col gap-3 justify-end">
-                    <div>
-                        <Heading size="xl">月々8,000円から。</Heading>
+                    <div className="mb-3">
+                        <Heading size="xl">
+                            月々
+                            <Underline height={18}>8,000</Underline>
+                            円から。
+                        </Heading>
                     </div>
                     <div>
-                        <Heading>
+                        <Heading lineHeight={1.3}>
                             社内にIT人材がいなくても、代行サービスで豊富なサポートが受けられます
                         </Heading>
                     </div>
@@ -77,7 +83,9 @@ export default function ServicesPage() {
             </div>
 
             <Heading className="mt-[144px] mb-[50px]" size="xl">
-                ソフトウェア・SaaS
+                <Underline className="bottom-[-40px]">
+                    ソフトウェア・SaaS
+                </Underline>
             </Heading>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -134,7 +142,9 @@ export default function ServicesPage() {
             </div>
 
             <Heading className="mt-[144px] mb-[50px]" size="xl">
-                ハードウェア販売
+                <Underline className="bottom-[-40px]">
+                    ハードウェア販売
+                </Underline>
             </Heading>
             <div className="flex flex-row gap-6 items-center">
                 <Card className="w-[16.67%] h-[312px]">
@@ -173,7 +183,9 @@ export default function ServicesPage() {
             </div>
 
             <Heading className="mt-[144px] mb-[50px]" size="xl">
-                固定回線契約取次
+                <Underline className="bottom-[-40px]">
+                    固定回線契約取次
+                </Underline>
             </Heading>
 
             <div className="grid grid-cols-[45%_52%] h-[600px] gap-[3%]">

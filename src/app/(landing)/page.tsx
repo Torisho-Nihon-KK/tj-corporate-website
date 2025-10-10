@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 import { CTAButton } from "@/components/ui/cta-button";
+import { Underline } from "@/components/ui/underline";
 
 export default function LandingPage() {
     return (
@@ -36,6 +37,10 @@ export default function LandingPage() {
                         src="/hero.svg"
                         alt="Hero Image"
                     />
+                    <Heading fontSize={76} className="pt-6 pb-6">
+                        IT、<Underline height={24}>全部</Underline>
+                        やります。
+                    </Heading>
                     <Text className="block relative pb-6" size="md">
                         IT人材不足に、サヨナラを。
                         <br />

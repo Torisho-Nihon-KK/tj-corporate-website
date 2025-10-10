@@ -14,6 +14,7 @@ interface HeadingProps {
     mobileSize?: "xl" | "lg" | "md" | "base" | "sm";
     className?: string;
     lineHeight?: number;
+    fontSize?: number;
     children: React.ReactNode;
 }
 
@@ -21,7 +22,7 @@ export function Heading({
     className = "",
     size = "base",
     mobileSize,
-    //   fontSize,
+    fontSize,
     lineHeight = 1,
     children,
 }: HeadingProps) {
@@ -51,7 +52,10 @@ export function Heading({
                 "font-primary",
                 classNames
             )}
-            style={{ lineHeight: lineHeight }}
+            style={{
+                ...(fontSize ? { fontSize: `${fontSize}px` } : {}),
+                lineHeight: lineHeight,
+            }}
         >
             {children}
         </h3>
