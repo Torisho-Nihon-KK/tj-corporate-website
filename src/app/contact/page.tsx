@@ -3,11 +3,12 @@ import React, { useState } from "react";
 import SiteContent from "@/components/common/site-content";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heading } from "@/components/ui/heading";
-import { Form, useForm, SubmitHandler, Controller } from "react-hook-form";
+import { Form, useForm, Controller } from "react-hook-form";
 import { Text } from "@/components/ui/text";
 import PhoneInput from "react-phone-number-input";
 import { Button } from "@/components/ui/button";
 import * as RadixCheckbox from "@radix-ui/react-checkbox";
+import { Turnstile } from "@marsidev/react-turnstile";
 
 type ContactFormData = {
     firstName: string;
@@ -18,6 +19,7 @@ type ContactFormData = {
     message: string;
     communication: boolean;
     consent: boolean;
+    turnstile: string;
 };
 
 export default function App() {
@@ -26,8 +28,8 @@ export default function App() {
         formState: { errors },
         control,
     } = useForm<ContactFormData>();
-    const [phoneNumber, setPhoneNumber] = useState<string>();
 
+    const [phoneNumber, setPhoneNumber] = useState<string>();
     return (
         <SiteContent>
             <Card>
@@ -234,6 +236,36 @@ export default function App() {
                                         当社からのこのような配信はいつでも停止していただけます。配信の停止方法や、お客さまのプライバシーの尊重および保護に関する取り組みについては、当社のプライバシーポリシーをご確認ください。
                                     </Text>
                                 </div>
+                                <div className="col-span-2 flex items-center gap-2">
+                                    <Controller
+                                        name="turnstile"
+                                        control={control}
+                                        rules={{ required: true }}
+                                        render={({ field }) => (
+                                            <Turnstile
+                                                siteKey={
+                                                    process.env
+                                                        .NEXT_PUBLIC_TURNSTILE_SITE_KEY ??
+                                                    ""
+                                                }
+                                                options={{
+                                                    action: "submit-form",
+                                                    theme: "light",
+                                                    language: "ja",
+                                                }}
+                                                onSuccess={field.onChange}
+                                                onExpire={() =>
+                                                    field.onChange("")
+                                                }
+                                            />
+                                        )}
+                                    />
+                                    {errors.turnstile && (
+                                        <Text className="text-red-500">
+                                            この必須項目を入力してください。
+                                        </Text> /* This field is required */
+                                    )}
+                                </div>
                             </div>
                             <div className="mt-[100px] mb-2">
                                 {(errors.firstName ||
@@ -241,12 +273,14 @@ export default function App() {
                                     errors.companyName ||
                                     errors.email ||
                                     errors.message ||
-                                    errors.consent) && (
+                                    errors.consent ||
+                                    errors.turnstile) && (
                                     <Text className="text-red-500">
                                         全ての必須項目に入力してください。
                                     </Text>
                                 )}
                             </div>
+
                             <Button type="submit" className="w-full ">
                                 送信
                             </Button>

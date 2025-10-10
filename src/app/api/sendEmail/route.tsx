@@ -1,5 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server";
 import sgMail from "@sendgrid/mail";
+import type { TurnstileServerValidationResponse } from "@marsidev/react-turnstile";
 
 type ContactFormData = {
     firstName: string;
@@ -10,6 +11,7 @@ type ContactFormData = {
     message: string;
     communication: boolean;
     consent: boolean;
+    turnstile: string;
 };
 
 type EmailData = {
@@ -18,6 +20,10 @@ type EmailData = {
     subject: string;
     html: string;
 };
+
+const verifyEndpoint =
+    "https://challenges.cloudflare.com/turnstile/v0/siteverify";
+const secret = process.env.TURNSTILE_SECRET_KEY;
 
 export async function POST(request: NextRequest) {
     let requestData: ContactFormData;
@@ -31,8 +37,47 @@ export async function POST(request: NextRequest) {
         );
     }
 
+    const turnstileToken = requestData.turnstile;
+
     // TODO: DATA VALIDATION
 
+    // Verify Turnstile token
+    if (!secret) {
+        return NextResponse.json(
+            { message: "Turnstile secret key is not set." },
+            { status: 500 }
+        );
+    }
+    if (!turnstileToken) {
+        return NextResponse.json(
+            { message: "Turnstile token is missing." },
+            { status: 400 }
+        );
+    }
+    const verifyResponse = await fetch(verifyEndpoint, {
+        method: "POST",
+        body: `secret=${encodeURIComponent(
+            secret
+        )}&response=${encodeURIComponent(turnstileToken)}`,
+        headers: {
+            "content-type": "application/x-www-form-urlencoded",
+        },
+    });
+
+    const verifyData: TurnstileServerValidationResponse =
+        await verifyResponse.json();
+
+    if (!verifyData.success) {
+        return NextResponse.json(
+            {
+                message: "Turnstile verification failed.",
+                errors: verifyData["error-codes"],
+            },
+            { status: 400 }
+        );
+    }
+
+    // Check required fields
     if (
         !requestData.firstName ||
         !requestData.lastName ||
@@ -78,7 +123,9 @@ async function sendEmail(requestData: ContactFormData) {
 
     const apiKey = process.env.SENDGRID_API_KEY;
     if (!apiKey) {
-        throw new Error("SENDGRID_API_KEY environment variable is not set.");
+        throw new Error(
+            "NEXT_PUBLIC_SENDGRID_API_KEY environment variable is not set."
+        );
     }
     sgMail.setApiKey(apiKey);
     await sgMail
