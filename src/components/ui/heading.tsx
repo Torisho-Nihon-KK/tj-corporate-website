@@ -10,11 +10,10 @@ import { cn } from "@/lib/utils";
  * @param {lineHeight} lineHeight - The line height of the heading. Default is 1.
  */
 interface HeadingProps {
-    size?: "xl" | "lg" | "md" | "base" | "sm";
-    mobileSize?: "xl" | "lg" | "md" | "base" | "sm";
+    size?: "2xl" | "xl" | "lg" | "md" | "base" | "sm";
+    mobileSize?: "2xl" | "xl" | "lg" | "md" | "base" | "sm";
     className?: string;
     lineHeight?: number;
-    fontSize?: number;
     children: React.ReactNode;
 }
 
@@ -22,11 +21,11 @@ export function Heading({
     className = "",
     size = "base",
     mobileSize,
-    fontSize,
     lineHeight = 1,
     children,
 }: HeadingProps) {
     const sizeHeadingMobileClass = {
+        "2xl": "text-heading-mobile-2xl",
         xl: "text-heading-mobile-xl",
         lg: "text-heading-mobile-lg",
         md: "text-heading-mobile-md",
@@ -35,6 +34,7 @@ export function Heading({
     }[mobileSize ?? size];
 
     const sizeHeadingClass = {
+        "2xl": "md:text-heading-2xl",
         xl: "md:text-heading-xl",
         lg: "md:text-heading-lg",
         md: "md:text-heading-md",
@@ -53,7 +53,6 @@ export function Heading({
                 classNames
             )}
             style={{
-                ...(fontSize ? { fontSize: `${fontSize}px` } : {}),
                 lineHeight: lineHeight,
             }}
         >

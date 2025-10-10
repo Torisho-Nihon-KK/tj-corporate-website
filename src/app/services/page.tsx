@@ -11,7 +11,7 @@ import { Underline } from "@/components/ui/underline";
 export default function ServicesPage() {
     return (
         <SiteContent>
-            <div className="flex gap-[100px] items-center flex-shrink-0 mb-[108px]">
+            <div className="flex flex-col lg:flex-row gap-[50px] lg:gap-[100px] items-center flex-shrink-0 mb-[108px]">
                 <div className="flex-shrink-0 max-w-[480px]">
                     <Image
                         src="/services/hero.svg"
@@ -87,7 +87,7 @@ export default function ServicesPage() {
                 </Underline>
             </Heading>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
                 <Card>
                     <CardContent className="p-6">
                         <Image
@@ -145,15 +145,15 @@ export default function ServicesPage() {
                     ハードウェア販売
                 </Underline>
             </Heading>
-            <div className="flex flex-row gap-6 items-center">
-                <Card className="w-[16.67%] h-[312px]">
+            <div className="flex flex-row flex-wrap xl:flex-nowrap gap-[2.5%] items-center justify-center">
+                <Card className="w-[20%] md:w-[200px] h-[312px]">
                     <CardContent className="p-0 overflow-hidden">
                         <Image
                             src={"/services/PS5-Photoroom.png"}
                             alt="Desktop"
                             width={415}
                             height={353}
-                            className="top-[100px]"
+                            className="top-[26%]"
                             style={{
                                 position: "absolute",
                                 scale: "2",
@@ -161,7 +161,7 @@ export default function ServicesPage() {
                         />
                     </CardContent>
                 </Card>
-                <Card className="w-[41.67%] h-[312px]">
+                <Card className="w-[75%] md:w-[500px] h-[312px]">
                     <CardContent className="p-0 overflow-hidden">
                         <Image
                             src={"/services/Laptop-Photoroom.png"}
@@ -174,7 +174,7 @@ export default function ServicesPage() {
                         />
                     </CardContent>
                 </Card>
-                <div className="ml-[26px] w-[41.67%]">
+                <div className="ml-[0px] xl:ml-[26px] w-full xl:w-[41.67%] ">
                     <Text fontSize={20}>
                         当社は日本HP（ヒューレット・パッカード）社正規販売代理店として、法人向けHPデスクトップPC・ノートパソコン・ワークステーションを取り扱っております。
                     </Text>
@@ -187,11 +187,21 @@ export default function ServicesPage() {
                 </Underline>
             </Heading>
 
-            <div className="grid grid-cols-[45%_52%] h-[600px] gap-[3%]">
+            <div className="grid grid-cols-[45%_52%] max-h-[500px] gap-[3%]">
                 <div className="relative overflow-hidden bg-white rounded-2xl p-6 pt-[42px]">
-                    <Text fontSize={82} className="relative font-semibold z-20">
-                        月々4,180円~
-                    </Text>
+                    <Image
+                        src={"/services/4180.svg"}
+                        alt="月々4,180円~"
+                        width={0}
+                        height={0}
+                        style={{
+                            width: "100%",
+                            height: "auto",
+                            position: "relative",
+                        }}
+                        className="z-20"
+                    />
+
                     <Image
                         src={"/services/map.svg"}
                         alt="Map"

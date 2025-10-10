@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@source "../components/**/*.{ts,tsx}";
 @import "react-phone-number-input/style.css";
 
 :root {
@@ -28,22 +27,26 @@
     --font-eitai-gothic-bold: var(--font-eitai-gothic-bold);
     --font-noto-sans-jp: var(--font-noto-sans-jp);
 
+    --text-heading-mobile-2xl: 48px;
     --text-heading-mobile-xl: 40px;
     --text-heading-mobile-lg: 32px;
     --text-heading-mobile-md: 28px;
     --text-heading-mobile-base: 18px;
     --text-heading-mobile-sm: 16px;
 
+    --text-heading-2xl: 72px;
     --text-heading-xl: 64px;
     --text-heading-lg: 56px;
     --text-heading-md: 42px;
     --text-heading-base: 32px;
     --text-heading-sm: 16px;
 
+    --text-normal-4xl: 82px;
     --text-normal-lg: 24px;
     --text-normal-md: 16px;
     --text-normal-base: 14px;
 
+    --text-normal-mobile-4xl: 40px;
     --text-normal-mobile-lg: 16px;
     --text-normal-mobile-md: 14px;
     --text-normal-mobile-base: 12px;

@@ -34,7 +34,7 @@ export default function ArticlesPage() {
                 </Button>
             </div>
 
-            <div className="grid grid-cols-3 gap-[42px] py-[76px]">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-[42px] py-[76px]">
                 <Article
                     title="極側へ育過責キトネ周高テモ申周リトめと学"
                     date="2025年9月5日"

@@ -32,7 +32,7 @@ export default function LandingPage() {
                         src="/hero.svg"
                         alt="Hero Image"
                     />
-                    <Heading fontSize={76} className="pt-6 pb-6">
+                    <Heading size="2xl" className="pt-6 pb-6">
                         IT、<Underline height={24}>全部</Underline>
                         やります。
                     </Heading>
