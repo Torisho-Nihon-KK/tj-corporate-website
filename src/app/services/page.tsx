@@ -146,7 +146,7 @@ export default function ServicesPage() {
                 </Underline>
             </Heading>
             <div className="flex flex-row flex-wrap xl:flex-nowrap gap-[2.5%] items-center justify-center">
-                <Card className="w-[20%] md:w-[200px] h-[312px]">
+                <Card className="w-[30%] md:w-[200px] h-[312px]">
                     <CardContent className="p-0 overflow-hidden">
                         <Image
                             src={"/services/PS5-Photoroom.png"}
@@ -161,7 +161,7 @@ export default function ServicesPage() {
                         />
                     </CardContent>
                 </Card>
-                <Card className="w-[75%] md:w-[500px] h-[312px]">
+                <Card className="w-[65%] md:w-[500px] h-[312px]">
                     <CardContent className="p-0 overflow-hidden">
                         <Image
                             src={"/services/Laptop-Photoroom.png"}
