@@ -1,6 +1,8 @@
 import { type NextRequest, NextResponse } from "next/server";
 import sgMail from "@sendgrid/mail";
 import type { TurnstileServerValidationResponse } from "@marsidev/react-turnstile";
+import { render } from "@react-email/components";
+import EnquiryEmailContent from "./enquiry";
 
 type ContactFormData = {
     firstName: string;
@@ -12,6 +14,7 @@ type ContactFormData = {
     communication: boolean;
     consent: boolean;
     turnstile: string;
+    timestamp: string;
 };
 
 // type EmailData = {
@@ -91,7 +94,8 @@ export async function POST(request: NextRequest) {
             { status: 400 }
         );
     }
-    console.log("Request data:", requestData);
+    // console.log("Request data:", requestData);
+    requestData.timestamp = new Date().toLocaleString();
 
     await sendEmail(requestData);
 
@@ -109,16 +113,16 @@ export async function GET() {
 }
 
 async function sendEmail(requestData: ContactFormData) {
-    console.log("Sending email with data:", requestData);
+    // console.log("Sending email with data:", requestData);
+
+    const emailHtml = await render(<EnquiryEmailContent {...requestData} />);
 
     const msg = {
         to: "devops@torishojp.com",
         from: "devops@torishojp.com",
         subject: "Test Email from SendGrid",
         //text: request.content,
-        html:
-            "Another email has been received. The json of the request is: " +
-            JSON.stringify(requestData),
+        html: emailHtml,
     };
 
     const apiKey = process.env.SENDGRID_API_KEY;

@@ -20,6 +20,7 @@ type ContactFormData = {
     communication: boolean;
     consent: boolean;
     turnstile: string;
+    timestamp: string;
 };
 
 export default function App() {
