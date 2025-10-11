@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from "next/server";
 import sgMail from "@sendgrid/mail";
 import type { TurnstileServerValidationResponse } from "@marsidev/react-turnstile";
 import { render } from "@react-email/components";
-import EnquiryEmailContent from "./enquiry";
+import EnquiryEmailContent from "@/components/emails/enquiry";
 
 type ContactFormData = {
     firstName: string;
@@ -95,7 +95,9 @@ export async function POST(request: NextRequest) {
         );
     }
     // console.log("Request data:", requestData);
-    requestData.timestamp = new Date().toLocaleString();
+    requestData.timestamp = new Date().toLocaleString("ja-JP", {
+        timeZone: "Asia/Tokyo",
+    });
 
     await sendEmail(requestData);
 

@@ -18,9 +18,9 @@ export default function EnquiryEmailContent({
     companyName = "会社名",
     email = "test@email.com",
     phoneNumber = "+1234567890",
-    message = "璧ス彩銀位新ぱ選画クラマモ暴併ケ顔10協傍剰哀9山すのんゃ野康ユ社一ゅる社就ネヨ新鳴食レモカホ聞62監トア数肉あた水選くむド点方っ部壊層恐大るみざ。残は騰料ヱスモマ連品の立賠ユメ日門タ和容きるは変惑モヲヤ以名やッぼる軽条菓ゆひ未人チニ型件実比9村チソヒ索植ワコオト連39急色幹印禁ドそる。囲ふ山姫伝をびれド不速ツハ設語がぴんリ先衛ニシ事条にこどラ松通レエメク分率ょだがぐ値各題セソ方落メヒ真政薦ヤソ経支ルコヨト講学レぽ共権は町内ホレコテ朝備掛わき。景記クテ下写調クナヒ隊膚交あへ王命ニネ併57新ぼねひて励装本リネ申競セ変偽べひ短熊ワアネ海典進未えルや。東フべ登激量ね続和さのきい問年ん国31稿レヘキソ校57真りへむな周写帰せんぽ事忙さおいぞ日87省ぽずめリ山古イ。",
+    message = "璧ス彩銀位新ぱ選画クラマモ暴併ケ顔10協傍剰哀9山すのんゃ野康ユ社一ゅる社就ネヨ新鳴食レモカホ聞62監トア数肉あた水選くむド点方っ部壊層恐大るみざ。\n\n残は騰料ヱスモマ連品の立賠ユメ日門タ和容きるは変惑モヲヤ以名やッぼる軽条菓ゆひ未人チニ型件実比9村チソヒ索植ワコオト連39急色幹印禁ドそる。\n囲ふ山姫伝をびれド不速ツハ設語がぴんリ先衛ニシ事条にこどラ松通レエメク分率ょだがぐ値各題セソ方落メヒ真政薦ヤソ経支ルコヨト講学レぽ共権は町内ホレコテ朝備掛わき。景記クテ下写調クナヒ隊膚交あへ王命ニネ併57新ぼねひて励装本リネ申競セ変偽べひ短熊ワアネ海典進未えルや。東フべ登激量ね続和さのきい問年ん国31稿レヘキソ校57真りへむな周写帰せんぽ事忙さおいぞ日87省ぽずめリ山古イ。",
     communication = false,
-    timestamp = "timestamp",
+    timestamp = new Date().toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" }),
 }: {
     firstName?: string;
     lastName?: string;
@@ -44,7 +44,7 @@ export default function EnquiryEmailContent({
                         <Heading className="">
                             お問い合わせフォームへの新規投稿
                         </Heading>
-                        <Text>Time submitted: {timestamp}</Text>
+                        <Text>Time submitted: {timestamp} GMT+9</Text>
                         <Hr />
                         <Section>
                             <Row>
@@ -81,7 +81,20 @@ export default function EnquiryEmailContent({
                                 <Heading className="mb-0" as="h3">
                                     より詳しい内容をご入力ください：
                                 </Heading>
-                                <Text className="my-0 h-60">{message}</Text>
+                                {message.split(/\n{2,}/).map((para, idx) => (
+                                    <div key={idx} className="mb-5">
+                                        {para
+                                            .split("\n")
+                                            .map((line, lineIdx) => (
+                                                <Text
+                                                    className="my-0"
+                                                    key={lineIdx}
+                                                >
+                                                    {line}
+                                                </Text>
+                                            ))}
+                                    </div>
+                                ))}
                             </Row>
                             <Row>
                                 <Heading className="mb-0" as="h3">
