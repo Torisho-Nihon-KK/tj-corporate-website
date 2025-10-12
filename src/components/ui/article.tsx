@@ -1,7 +1,7 @@
-import { Card, CardContent } from "../../components/ui/card";
-import { Heading } from "../../components/ui/heading";
-import { Text } from "../../components/ui/text";
-import { CTAButtonSecondary } from "../../components/ui/cta-button";
+import { Card, CardContent } from "./card";
+import { Heading } from "./heading";
+import { Text } from "./text";
+import { CTAButtonSecondary } from "./cta-button";
 
 type ArticleProps = {
     title: string;
@@ -38,7 +38,11 @@ export default function Article({
                     <Heading lineHeight={1.2}>{title}</Heading>
                 </div>
                 <div>
-                    <Text>{description}</Text>
+                    {description.split("\n").map((line, idx) => (
+                        <Text className="p-0" key={idx}>
+                            {line}
+                        </Text>
+                    ))}
                 </div>
                 <CTAButtonSecondary>続きを読む</CTAButtonSecondary>
             </div>

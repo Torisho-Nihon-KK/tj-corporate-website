@@ -6,6 +6,7 @@ import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 import { CTAButton } from "@/components/ui/cta-button";
 import { Underline } from "@/components/ui/underline";
+import CallToAction from "@/components/ui/call-to-action";
 
 export default function LandingPage() {
     return (
@@ -326,6 +327,7 @@ export default function LandingPage() {
                     </CardContent>
                 </Card>
             </div>
+            <CallToAction />
         </SiteContent>
     );
 }

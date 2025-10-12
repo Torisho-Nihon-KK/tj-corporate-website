@@ -4,7 +4,7 @@ import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 import { Card, CardContent } from "@/components/ui/card";
 import CardWithCaption from "./card-with-caption";
-import CallToAction from "../(landing)/call-to-action";
+import CallToAction from "@/components/ui/call-to-action";
 import { CTAButton } from "@/components/ui/cta-button";
 import { Underline } from "@/components/ui/underline";
 

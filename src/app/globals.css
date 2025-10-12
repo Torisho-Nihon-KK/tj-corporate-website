@@ -33,13 +33,15 @@
     --text-heading-mobile-md: 28px;
     --text-heading-mobile-base: 18px;
     --text-heading-mobile-sm: 16px;
+    --text-heading-mobile-xs: 14px;
 
     --text-heading-2xl: 72px;
     --text-heading-xl: 64px;
     --text-heading-lg: 56px;
     --text-heading-md: 42px;
     --text-heading-base: 32px;
-    --text-heading-sm: 16px;
+    --text-heading-sm: 24px;
+    --text-heading-xs: 16px;
 
     --text-normal-4xl: 82px;
     --text-normal-lg: 24px;
