@@ -7,6 +7,13 @@ import CardWithCaption from "./card-with-caption";
 import CallToAction from "@/components/ui/call-to-action";
 import { CTAButton } from "@/components/ui/cta-button";
 import { Underline } from "@/components/ui/underline";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "サービス | 鳥商日本株式会社・東京都板橋区のITカンパニー",
+    description:
+        "当社がご提供するサービスをご覧になれます。法人向け情シス・ヘルプデスクの代行業務、Microsoft 365・HP社製PC販売、光回線のご紹介など。",
+};
 
 export default function ServicesPage() {
     return (

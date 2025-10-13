@@ -1,7 +1,13 @@
 import SiteContent from "@/components/common/site-content";
-
+import type { Metadata } from "next";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heading } from "@/components/ui/heading";
+
+export const metadata: Metadata = {
+    title: "特定商取引法に基づく表記 | 鳥商日本株式会社",
+    description:
+        "当社の会社情報や、特定商取引法に基づく当社の販売条件等はこちらでご覧になれます。",
+};
 
 export default function Legal() {
     return (

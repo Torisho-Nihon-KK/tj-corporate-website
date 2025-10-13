@@ -30,8 +30,9 @@ const eitaiGothicBold = localFont({
 });
 
 export const metadata: Metadata = {
-    title: "TJ Corporate",
-    description: "Landing page for TJ Corporate",
+    title: "鳥商日本株式会社 | 東京都板橋区のITカンパニー",
+    description:
+        "パソコンやインターネットお困りごとは「鳥商」へ。法人向け情シス・ヘルプデスク業務のアウトソーシングや、地域のお客さま向けのPCトラブル相談を承っています。",
     icons: {
         icon: "/logo.svg",
     },
