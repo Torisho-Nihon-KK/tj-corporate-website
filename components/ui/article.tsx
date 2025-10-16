@@ -1,15 +1,15 @@
-import { Card, CardContent } from "./card";
+import Markdown from "react-markdown";
 import { Heading } from "./heading";
 import { Text } from "./text";
-import { CTAButtonSecondary } from "./cta-button";
+import Image from "next/image";
 
-type ArticleProps = {
+export type ArticleProps = {
     title: string;
     date: string;
     authorName: string;
     timeToRead: number;
-    description: string;
-    className?: string;
+    thumbnailSrc?: string;
+    markdownContent: string;
 };
 
 export default function Article({
@@ -17,34 +17,56 @@ export default function Article({
     date,
     authorName,
     timeToRead,
-    description,
-    className = "",
+    thumbnailSrc,
+    markdownContent,
 }: ArticleProps) {
     return (
-        <div className={`flex flex-col gap-[12px] ${className}`}>
-            <Card className="m-0 h-[325px]">
-                <CardContent className="p-12">Image goes here</CardContent>
-            </Card>
-            <div className="flex flex-col gap-3">
-                <div className="flex items-center">
-                    <Text className="bg-secondary px-[10px] py-1 rounded-full mr-2 ">
-                        {authorName} 書
-                    </Text>
-                    <Text>
-                        {date} ・ {timeToRead}分で読めます
-                    </Text>
-                </div>
-                <div>
-                    <Heading lineHeight={1.2}>{title}</Heading>
-                </div>
-                <div>
-                    {description.split("\n").map((line, idx) => (
-                        <Text className="p-0" key={idx}>
-                            {line}
+        <div>
+            <div className="lg:px-[220px] flex flex-col gap-4">
+                <div className="flex flex-col gap-3">
+                    <div className="flex items-center">
+                        <Text className="bg-secondary px-[10px] py-1 rounded-full mr-2">
+                            {authorName} 書
                         </Text>
-                    ))}
+                        <Text>
+                            {date} ・ {timeToRead}分で読めます
+                        </Text>
+                    </div>
                 </div>
-                <CTAButtonSecondary>続きを読む</CTAButtonSecondary>
+                <Heading size="md">{title}</Heading>
+            </div>
+
+            <div className="p-0 mt-[24px] mb-[42px] max-h-[400px] overflow-hidden rounded-lg">
+                {thumbnailSrc && (
+                    <Image
+                        src={thumbnailSrc}
+                        alt={title}
+                        width={1200}
+                        height={400}
+                        className="w-full h-auto "
+                    />
+                )}
+            </div>
+
+            <div className="lg:px-[220px] flex flex-col gap-4">
+                <div id="markdown-content">
+                    <Markdown
+                        components={{
+                            h2: ({ ...props }) => (
+                                <Heading className="pb-[10px]">
+                                    {props.children}
+                                </Heading>
+                            ),
+                            p: ({ ...props }) => (
+                                <Text className="pb-[24px]">
+                                    {props.children}
+                                </Text>
+                            ),
+                        }}
+                    >
+                        {markdownContent}
+                    </Markdown>
+                </div>
             </div>
         </div>
     );
