@@ -135,7 +135,7 @@ export default function ServicesPage() {
                             当社はエックスサーバービジネスパートナーとして、Xserver
                             レンタルサーバー・VPSの販売取次を行っております。
                         </Text>
-                        <div className="flex gap-3">
+                        <div className="flex flex-wrap gap-3">
                             <CTAButton href="https://www.xserver.ne.jp/agency_via/?cd=XAYYVG&type=server">
                                 Xserver レンタルサーバー
                             </CTAButton>
