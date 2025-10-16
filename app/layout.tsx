@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 import "./globals.css";
 // import { Suspense } from "react";
@@ -45,6 +46,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ja">
+            <GoogleTagManager
+                gtmId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? ""}
+            />
             <body
                 className={`${notoSansJP.variable} ${eitaiGothicBold.variable}`}
             >
