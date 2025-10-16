@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { MoveRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Heading } from "@/components/ui/heading";
+import { Button } from "./button";
+import { Heading } from "./heading";
 
 export default function CallToAction({
     className = "my-16",

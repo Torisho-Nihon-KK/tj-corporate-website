@@ -35,9 +35,9 @@ To run this project, you will need to add the following environment variables to
 ```
 corporate-website/
 ├── app/
-│   ├── (landing)/          # Landing page
+│   ├── (website)/
+│   │   ├── (landing)/      # Landing page
 │   │   ├── api/            # APIs
-│   │   ├── about/          # About Us page
 │   │   ├── contact/        # Contact page
 │   │   ├── legal-sct/      # Legal SCT page
 │   │   ├── privacy/        # Privacy page

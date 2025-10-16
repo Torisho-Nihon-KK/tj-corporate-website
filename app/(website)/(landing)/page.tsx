@@ -30,7 +30,7 @@ export default function LandingPage() {
                         }}
                         width={0}
                         height={0}
-                        src="/hero.svg"
+                        src="/landing/hero.svg"
                         alt="Hero Image"
                     />
                     <Heading size="2xl" className="pt-6 pb-6">
@@ -50,7 +50,7 @@ export default function LandingPage() {
 
             <Card className="grid xl:grid-cols-2 grid-cols-1 text-center relative align-left mx-0 py-4 gap-3 xl:gap-0 items-center">
                 <Image
-                    src="/tree.svg"
+                    src="/landing/tree.svg"
                     className="absolute xl:left-0 xl:top-[-15px] xl:rotate-180 top-[-10px] right-[-78px] scale-100 xl:scale-175"
                     alt=""
                     width={0}
@@ -60,7 +60,7 @@ export default function LandingPage() {
                 <CardContent className="px-3 p-0 flex mx-auto xl:mr-[140px] my-auto align-right justify-center xl:justify-end text-right w-full items">
                     <div className="flex items-center justify-end">
                         <Image
-                            src="/smiley-face.svg"
+                            src="/landing/smiley-face.svg"
                             alt=""
                             className="inline-block"
                             width={0}
@@ -76,7 +76,7 @@ export default function LandingPage() {
                     <div className="flex flex-1 items-center justify-center gap-4 md:gap-6 w-full h-full">
                         <div className="flex-1 min-w-0 flex items-center justify-center">
                             <Image
-                                src="/partner-xserver.svg"
+                                src="/landing/partner-xserver.svg"
                                 alt="XServer Business Partner"
                                 className="h-full max-h-[55px] w-auto flex-shrink min-w-0"
                                 width={0}
@@ -90,7 +90,7 @@ export default function LandingPage() {
                         </div>
                         <div className="flex-1 min-w-0 flex items-center justify-center">
                             <Image
-                                src="/partner-hp.svg"
+                                src="/landing/partner-hp.svg"
                                 alt="HP Business Partner"
                                 className="h-full max-h-[55px] w-auto flex-shrink min-w-0"
                                 width={0}
@@ -104,7 +104,7 @@ export default function LandingPage() {
                         </div>
                         <div className="flex-1 min-w-0 flex items-center justify-center">
                             <Image
-                                src="/partner-microsoft.svg"
+                                src="/landing/partner-microsoft.svg"
                                 alt="Microsoft Partner"
                                 className="h-full max-h-[55px] w-auto flex-shrink min-w-0"
                                 width={0}
@@ -125,7 +125,7 @@ export default function LandingPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 text-left justify-center">
                         <div className="mx-auto lg:mx-0 pb-3 lg:pb-0">
                             <Image
-                                src="/1-header.svg"
+                                src="/landing/1-header.svg"
                                 alt="鳥商ができること"
                                 width={0}
                                 height={0}
@@ -142,7 +142,7 @@ export default function LandingPage() {
                         <div className="px-3 m-auto lg:mr-2 flex gap-10.5 max-h-37.5 items-center justify-self-center lg:justify-self-end lg:items-right my-auto">
                             <div>
                                 <Image
-                                    src="/1-1.svg"
+                                    src="/landing/1-1.svg"
                                     alt=""
                                     width={0}
                                     height={0}
@@ -155,7 +155,7 @@ export default function LandingPage() {
                             </div>
                             <div>
                                 <Image
-                                    src="/1-2.svg"
+                                    src="/landing/1-2.svg"
                                     alt=""
                                     width={0}
                                     height={0}
@@ -168,7 +168,7 @@ export default function LandingPage() {
                             </div>
                             <div>
                                 <Image
-                                    src="/1-3.svg"
+                                    src="/landing/1-3.svg"
                                     alt=""
                                     width={0}
                                     height={0}
@@ -189,7 +189,7 @@ export default function LandingPage() {
                     <CardContent className="grid grid-cols-[80px_1fr] md:grid-cols-1 gap-6 md:gap-12.5 items-center">
                         <div className="max-w-[80px] md:max-w-[200px] m-auto">
                             <Image
-                                src="/2-1.svg"
+                                src="/landing/2-1.svg"
                                 alt="コスト削減診断"
                                 width={0}
                                 height={0}
@@ -212,7 +212,7 @@ export default function LandingPage() {
                 <Card>
                     <CardContent className="grid grid-cols-[80px_1fr] md:grid-cols-1 gap-6 md:gap-12.5 items-center">
                         <Image
-                            src="/2-2.svg"
+                            src="/landing/2-2.svg"
                             alt="ツール選定・導入支援"
                             width={0}
                             height={0}
@@ -235,7 +235,7 @@ export default function LandingPage() {
                 <Card>
                     <CardContent className="grid grid-cols-[80px_1fr] md:grid-cols-1 gap-6 md:gap-12.5 items-center">
                         <Image
-                            src="/2-3.svg"
+                            src="/landing/2-3.svg"
                             alt="管理・運用支援"
                             width={0}
                             height={0}
@@ -267,7 +267,7 @@ export default function LandingPage() {
                         </div>
                         <div className="max-w-[80px] md:max-w-[220px]">
                             <Image
-                                src="/3-1.svg"
+                                src="/landing/3-1.svg"
                                 alt="ソフトウェア販売"
                                 width={0}
                                 height={0}
@@ -290,7 +290,7 @@ export default function LandingPage() {
                         </div>
                         <div className="max-w-[80px] md:max-w-[220px]">
                             <Image
-                                src="/3-2.svg"
+                                src="/landing/3-2.svg"
                                 alt="ハードウェア販売"
                                 width={0}
                                 height={0}
@@ -313,7 +313,7 @@ export default function LandingPage() {
                         </div>
                         <div className="max-w-[80px] md:max-w-[220px]">
                             <Image
-                                src="/3-3.svg"
+                                src="/landing/3-3.svg"
                                 alt="固定回線契約取次"
                                 width={0}
                                 height={0}

@@ -8,7 +8,7 @@ import "./globals.css";
 const notoSansJP = localFont({
     src: [
         {
-            path: "../../public/fonts/NotoSansJP-Regular.ttf",
+            path: "../public/fonts/NotoSansJP-Regular.ttf",
             weight: "400",
             style: "Regular",
         },
@@ -20,7 +20,7 @@ const notoSansJP = localFont({
 const eitaiGothicBold = localFont({
     src: [
         {
-            path: "../../public/fonts/KOT-Eitai Gothic Bold.ttf",
+            path: "../public/fonts/KOT-Eitai Gothic Bold.ttf",
             weight: "700",
             style: "Bold",
         },
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description:
         "パソコンやインターネットお困りごとは「鳥商」へ。法人向け情シス・ヘルプデスク業務のアウトソーシングや、地域のお客さま向けのPCトラブル相談を承っています。",
     icons: {
-        icon: "/logo.svg",
+        icon: "/logos/logo.svg",
     },
 };
 

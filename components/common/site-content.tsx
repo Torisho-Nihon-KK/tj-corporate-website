@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
-import Header from "@/components/banners/header";
-import Footer from "@/components/banners/footer";
+import Header from "../banners/header";
+import Footer from "../banners/footer";
 
 export default function SiteContent({
     className,

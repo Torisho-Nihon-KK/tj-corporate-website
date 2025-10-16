@@ -9,7 +9,7 @@ import {
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "../ui/dropdown-menu";
 import { useState } from "react";
 import Sidebar from "./sidebar";
 
@@ -25,7 +25,7 @@ export default function Header() {
                         {/* Logo */}
                         <Link href="/" className="flex items-center">
                             <Image
-                                src="/logo.svg"
+                                src="/logos/logo.svg"
                                 alt="Logo"
                                 width={72}
                                 height={36}

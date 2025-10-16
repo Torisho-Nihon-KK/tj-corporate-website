@@ -25,7 +25,7 @@ export default function Footer() {
                 {/* Logo Section */}
                 <div className="relative z-10 mx-auto md:mx-0 pb-10.5 md:pb-0">
                     <Image
-                        src="/full-logo.svg"
+                        src="/logos/full-logo.svg"
                         alt="Torisho Logo"
                         width={150}
                         height={105}
@@ -37,6 +37,7 @@ export default function Footer() {
                         <Link
                             href="https://www.instagram.com/torishojp/"
                             target="_blank"
+                            aria-label="Instagram"
                         >
                             <FaInstagram
                                 size={24}
@@ -46,6 +47,7 @@ export default function Footer() {
                         <Link
                             href="https://www.linkedin.com/company/99918622/"
                             target="_blank"
+                            aria-label="LinkedIn"
                         >
                             <FaLinkedin
                                 size={24}
@@ -55,6 +57,7 @@ export default function Footer() {
                         <Link
                             href="https://www.facebook.com/torishojp"
                             target="_blank"
+                            aria-label="Facebook"
                         >
                             <FaFacebook
                                 size={24}
