@@ -118,11 +118,18 @@ async function sendEmail(requestData: ContactFormData) {
     // console.log("Sending email with data:", requestData);
 
     const emailHtml = await render(<EnquiryEmailContent {...requestData} />);
+    const email = process.env.ENQUIRY_EMAIL;
+    if (!email) {
+        throw new Error("ENQUIRY_EMAIL environment variable is not set.");
+    }
 
     const msg = {
-        to: "devops@torishojp.com",
-        from: "devops@torishojp.com",
-        subject: "Test Email from SendGrid",
+        to: email,
+        from: email,
+        subject:
+            process.env.NODE_ENV == "production"
+                ? "お問い合わせフォームへの新規投稿"
+                : "[DEV] お問い合わせフォームへの新規投稿",
         //text: request.content,
         html: emailHtml,
     };
