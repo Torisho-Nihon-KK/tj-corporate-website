@@ -19,8 +19,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
     const otherArticles = await getOtherArticlesExceptSlug(slug);
 
-    // console.log(data);
-    // console.log(content);
     let articleData: ArticleProps;
 
     try {
@@ -45,7 +43,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                 次を読む
             </Heading>
 
-            <div className="grid grid-cols-3 gap-[42px]">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-[42px]">
                 {otherArticles.slice(0, 3).map((a) => (
                     <ArticleOverview
                         key={a.slug}
