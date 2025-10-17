@@ -38,13 +38,15 @@ export default function Article({
 
             <div className="p-0 mt-[24px] mb-[42px] max-h-[400px] overflow-hidden rounded-lg">
                 {thumbnailSrc && (
-                    <Image
-                        src={thumbnailSrc}
-                        alt={title}
-                        width={1200}
-                        height={400}
-                        className="w-full h-auto "
-                    />
+                    <div className="flex items-center justify-center h-[400px]">
+                        <Image
+                            src={thumbnailSrc}
+                            alt={title}
+                            width={1200}
+                            height={400}
+                            className="w-full h-auto"
+                        />
+                    </div>
                 )}
             </div>
 

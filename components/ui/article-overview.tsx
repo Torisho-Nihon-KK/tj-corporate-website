@@ -24,7 +24,7 @@ export default function ArticleOverview({
     slug,
 }: ArticleOverviewProps) {
     return (
-        <div className={`flex flex-col gap-[12px]`}>
+        <div className={`flex flex-col gap-[12px] h-full`}>
             <Card className="m-0 h-[325px]">
                 <CardContent className="p-0 h-full">
                     <div className="relative h-full w-full">
@@ -58,7 +58,7 @@ export default function ArticleOverview({
                         </Text>
                     ))}
                 </div>
-                <CTAButtonSecondary href={`article/${slug}`}>
+                <CTAButtonSecondary href={`/article/${slug}`}>
                     続きを読む
                 </CTAButtonSecondary>
             </div>

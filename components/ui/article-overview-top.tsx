@@ -47,7 +47,7 @@ export default function TopArticleOverview({
                 <div>
                     <Text>{description}</Text>
                 </div>
-                <CTAButton href={`article/${slug}`}>続きを読む</CTAButton>
+                <CTAButton href={`/article/${slug}`}>続きを読む</CTAButton>
             </div>
         </div>
     );
