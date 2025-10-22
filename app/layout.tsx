@@ -43,9 +43,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ja">
-            <GoogleTagManager
-                gtmId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? ""}
-            />
+            <GoogleTagManager gtmId={process.env.GTM_ID ?? ""} />
             <body
                 className={`${notoSansJP.variable} ${eitaiGothicBold.variable}`}
             >
