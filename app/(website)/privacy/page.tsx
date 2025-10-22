@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
-import { List, ListItem } from "@/components/ui/ordered-list";
+import { List, ListItem } from "@/components/ui/list";
 
 export const metadata: Metadata = {
     title: "個人情報保護方針 | 鳥商日本株式会社",

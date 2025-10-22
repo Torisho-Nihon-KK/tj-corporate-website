@@ -33,7 +33,7 @@ export function List({
     return ordered ? (
         <ol
             className={cn(
-                "list-decimal list-inside font-secondary text-justify-auto",
+                "pl-6 list-decimal list-outside font-secondary text-justify-auto",
                 sizeNormalMobileClass,
                 sizeNormalClass,
                 classNames,
@@ -45,7 +45,7 @@ export function List({
     ) : (
         <ul
             className={cn(
-                "list-disc list-inside font-secondary text-justify-auto",
+                "pl-6 list-disc list-outside font-secondary text-justify-auto ",
                 sizeNormalMobileClass,
                 sizeNormalClass,
                 classNames,
@@ -58,5 +58,5 @@ export function List({
 }
 
 export function ListItem({ children }: { children: React.ReactNode }) {
-    return <li>{children}</li>;
+    return <li className="pl-4">{children}</li>;
 }

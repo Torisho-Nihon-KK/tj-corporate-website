@@ -2,6 +2,12 @@ import Markdown from "react-markdown";
 import { Heading } from "./heading";
 import { Text } from "./text";
 import Image from "next/image";
+import { List, ListItem } from "./list";
+import Link from "next/link";
+import { remarkHeadingId } from "remark-custom-heading-id";
+import remarkGfm from "remark-gfm";
+
+import { BlockQuote } from "./blockquote";
 
 export type ArticleProps = {
     title: string;
@@ -34,9 +40,7 @@ export default function Article({
                     </div>
                 </div>
                 <Heading size="md">{title}</Heading>
-            </div>
 
-            <div className="p-0 mt-[24px] mb-[42px] max-h-[400px] overflow-hidden rounded-lg">
                 {thumbnailSrc && (
                     <div className="flex items-center justify-center h-[400px]">
                         <Image
@@ -44,25 +48,89 @@ export default function Article({
                             alt={title}
                             width={1200}
                             height={400}
-                            className="w-full h-auto"
+                            className="h-full w-auto"
                         />
                     </div>
                 )}
-            </div>
 
-            <div className="lg:px-[220px] flex flex-col gap-4">
                 <div id="markdown-content">
                     <Markdown
+                        remarkPlugins={[remarkHeadingId, remarkGfm]}
                         components={{
-                            h2: ({ ...props }) => (
-                                <Heading className="pb-[10px]">
+                            h1: ({ ...props }) => (
+                                <Heading
+                                    type="h1"
+                                    className="mb-[1rem] mt-[1.5rem] pb-[9.6px] border-b border-[#d1d9e0b3]"
+                                    lineHeight={1.25}
+                                    size="base"
+                                    id={props.id || ""}
+                                >
                                     {props.children}
                                 </Heading>
                             ),
+
+                            h2: ({ ...props }) => (
+                                <Heading
+                                    type="h2"
+                                    size="sm"
+                                    className="pb-[9.6px] mt-[1.5rem] mb-[1rem] border-b border-[#d1d9e0b3]"
+                                    lineHeight={1.25}
+                                    id={props.id || ""}
+                                >
+                                    {props.children}
+                                </Heading>
+                            ),
+                            h3: ({ ...props }) => (
+                                <Heading
+                                    type="h3"
+                                    size="xs"
+                                    className="pb-[8px] mt-[1.5rem] mb-[1rem]"
+                                    id={props.id || ""}
+                                >
+                                    {props.children}
+                                </Heading>
+                            ),
+
                             p: ({ ...props }) => (
-                                <Text className="pb-[24px]">
+                                <Text className="mb-[1rem]" fontSize={16}>
                                     {props.children}
                                 </Text>
+                            ),
+
+                            ul: ({ ...props }) => (
+                                <List ordered={false} className="mb-[1rem]">
+                                    {props.children}
+                                </List>
+                            ),
+
+                            ol: ({ ...props }) => (
+                                <List ordered={true} className="mb-[1rem]">
+                                    {props.children}
+                                </List>
+                            ),
+                            li: ({ ...props }) => (
+                                <ListItem>{props.children}</ListItem>
+                            ),
+
+                            a: ({ ...props }) => (
+                                <Link
+                                    href={props.href || "#"}
+                                    className="text-blue-600 underline"
+                                >
+                                    {props.children}
+                                </Link>
+                            ),
+
+                            blockquote: ({ ...props }) => (
+                                <BlockQuote className="mb-[1rem] pl-6">
+                                    {props.children}
+                                </BlockQuote>
+                            ),
+
+                            strong: ({ ...props }) => (
+                                <strong className="font-bold">
+                                    {props.children}
+                                </strong>
                             ),
                         }}
                     >
