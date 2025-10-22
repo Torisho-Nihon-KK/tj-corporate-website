@@ -17,17 +17,15 @@ export default function TopArticleOverview({
     return (
         <div className={`grid grid-cols-3 gap-[42px] items-center`}>
             <Card className="m-0 h-[400px] col-span-2">
-                <CardContent className="p-0 h-full">
-                    <div className="relative h-full w-full">
-                        {thumbnailSrc && (
-                            <Image
-                                src={thumbnailSrc}
-                                alt={title}
-                                fill
-                                className="object-cover"
-                            />
-                        )}
-                    </div>
+                <CardContent className="p-0 h-full w-full relative">
+                    {thumbnailSrc && (
+                        <Image
+                            src={thumbnailSrc}
+                            alt={title}
+                            fill
+                            className="object-cover scale-105"
+                        />
+                    )}
                 </CardContent>
             </Card>
             <div className="flex flex-col gap-3">

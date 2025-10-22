@@ -33,7 +33,7 @@ export default function ArticleOverview({
                                 src={thumbnailSrc}
                                 alt={title}
                                 fill
-                                className="object-cover"
+                                className="object-cover scale-105"
                             />
                         )}
                     </div>
