@@ -26,6 +26,15 @@ export default function Article({
     thumbnailSrc,
     markdownContent,
 }: ArticleProps) {
+    const formattedDate = new Date(date).toLocaleDateString("ja-JP", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+    });
+    if (formattedDate === "Invalid Date") {
+        throw new Error(`Invalid date format: ${date}`);
+    }
+
     return (
         <div>
             <div className="lg:px-[220px] flex flex-col gap-4">
@@ -35,7 +44,8 @@ export default function Article({
                             {authorName} 書
                         </Text>
                         <Text>
-                            {date} ・ {timeToRead}分で読めます
+                            {formattedDate} ・ {timeToRead}
+                            分で読めます
                         </Text>
                     </div>
                 </div>

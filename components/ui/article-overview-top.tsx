@@ -14,6 +14,12 @@ export default function TopArticleOverview({
     thumbnailSrc,
     slug,
 }: ArticleOverviewProps) {
+    const formattedDate = new Date(date).toLocaleDateString("ja-JP", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+    });
+
     return (
         <div className={`grid grid-cols-3 gap-[42px] items-center`}>
             <Card className="m-0 h-[400px] col-span-2">
@@ -35,7 +41,7 @@ export default function TopArticleOverview({
                             {authorName} 書
                         </Text>
                         <Text>
-                            {date} ・ {timeToRead}分で読めます
+                            {formattedDate} ・ {timeToRead}分で読めます
                         </Text>
                     </div>
                 </div>
