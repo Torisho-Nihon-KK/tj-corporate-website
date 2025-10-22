@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import { Text } from "@/components/ui/text";
 
 interface BlockQuoteProps {
     size?: "md" | "base" | "lg" | "4xl";
@@ -34,9 +33,9 @@ export function BlockQuote({
     return (
         <blockquote
             className={cn(
-                " font-secondary text-justify-auto pl-4 border-l-[.25em] border-solid border-muted italic",
                 sizeNormalMobileClass,
                 sizeNormalClass,
+                "text-justify-auto pl-4 border-l-[.25em] border-solid border-muted font-[#59636e] font-secondary",
                 classNames,
                 lineHeight
             )}

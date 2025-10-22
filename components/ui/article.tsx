@@ -48,7 +48,7 @@ export default function Article({
                             alt={title}
                             width={1200}
                             height={400}
-                            className="h-full w-auto"
+                            className="w-full h-auto"
                         />
                     </div>
                 )}
