@@ -40,6 +40,7 @@ export default function Header() {
                             <Link href="/services" className="">
                                 サービス
                             </Link>
+                            <Link href="/article">ブログ</Link>
 
                             <div className="relative group">
                                 <DropdownMenu>

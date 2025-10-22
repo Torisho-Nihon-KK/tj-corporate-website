@@ -67,49 +67,47 @@ export default function Footer() {
                     </div>
                 </div>
                 <div
-                    className="relative z-10 grid-row-3 ml-auto mr-8 justify-between items-end hidden md:grid"
+                    className="relative z-10 grid-row-3 ml-auto mr-8 justify-between hidden md:flex flex-col gap-[1rem] items-left"
                     style={{ fontSize: "16px" }}
                 >
-                    <div>
-                        <div className="relative">
-                            <Link href="/">ホーム</Link>
-                        </div>
-                        <div className="relative py-10">
-                            <Link href="/services">サービス</Link>
-                        </div>
-                        <div className="relative">
-                            <DropdownMenu>
-                                <DropdownMenuTrigger className="flex items-center">
-                                    法的情報
-                                    <span className="ml-2">
-                                        <Image
-                                            src="/arrow-down.svg"
-                                            alt="Dropdown"
-                                            width={10}
-                                            height={5}
-                                        />
-                                    </span>
-                                </DropdownMenuTrigger>
-                                <DropdownMenuContent
-                                    side="bottom"
-                                    className="ml-10 p-0 border-0 shadow-lg bg-background"
-                                >
-                                    <DropdownMenuItem>
-                                        <Link href="/privacy" className="block">
-                                            個人情報保護方針
-                                        </Link>
-                                    </DropdownMenuItem>
-                                    <DropdownMenuItem>
-                                        <Link
-                                            href="/legal-sct"
-                                            className="block"
-                                        >
-                                            特定商取引法に基づく表記
-                                        </Link>
-                                    </DropdownMenuItem>
-                                </DropdownMenuContent>
-                            </DropdownMenu>
-                        </div>
+                    <div className="relative">
+                        <Link href="/">ホーム</Link>
+                    </div>
+                    <div className="relative">
+                        <Link href="/services">サービス</Link>
+                    </div>
+                    <div className="relative ">
+                        <Link href="/article">ブログ</Link>
+                    </div>
+                    <div className="relative">
+                        <DropdownMenu>
+                            <DropdownMenuTrigger className="flex items-center">
+                                法的情報
+                                <span className="ml-2">
+                                    <Image
+                                        src="/arrow-down.svg"
+                                        alt="Dropdown"
+                                        width={10}
+                                        height={5}
+                                    />
+                                </span>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent
+                                side="bottom"
+                                className="ml-10 p-0 border-0 shadow-lg bg-background"
+                            >
+                                <DropdownMenuItem>
+                                    <Link href="/privacy" className="block">
+                                        個人情報保護方針
+                                    </Link>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem>
+                                    <Link href="/legal-sct" className="block">
+                                        特定商取引法に基づく表記
+                                    </Link>
+                                </DropdownMenuItem>
+                            </DropdownMenuContent>
+                        </DropdownMenu>
                     </div>
                 </div>
                 <span className="md:col-span-3 flex justify-center items-center relative z-10 text-primary-muted">
