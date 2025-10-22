@@ -39,24 +39,28 @@ export default async function Page({ params }: { params: { slug: string } }) {
                 markdownContent={content}
             />
 
-            <Heading className="py-[28px]" size="sm">
-                次を読む
-            </Heading>
+            {otherArticles.length > 0 && (
+                <Heading className="py-[28px]" size="sm">
+                    次を読む
+                </Heading>
+            )}
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-[42px]">
-                {otherArticles.slice(0, 3).map((a) => (
-                    <ArticleOverview
-                        key={a.slug}
-                        slug={a.slug}
-                        title={a.title}
-                        date={a.date}
-                        authorName={a.authorName}
-                        timeToRead={a.timeToRead}
-                        description={a.description}
-                        thumbnailSrc={a.thumbnailSrc}
-                    />
-                ))}
-            </div>
+            {otherArticles.length > 0 && (
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-[42px]">
+                    {otherArticles.slice(0, 3).map((a) => (
+                        <ArticleOverview
+                            key={a.slug}
+                            slug={a.slug}
+                            title={a.title}
+                            date={a.date}
+                            authorName={a.authorName}
+                            timeToRead={a.timeToRead}
+                            description={a.description}
+                            thumbnailSrc={a.thumbnailSrc}
+                        />
+                    ))}
+                </div>
+            )}
         </SiteContent>
     );
 }

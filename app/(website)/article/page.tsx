@@ -48,28 +48,30 @@ export default async function ArticlesPage({
                     <Text size="lg">申周(8)</Text>
                 </Button>
             </div> */}
-
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-[42px] py-[76px]">
-                {articles
-                    .slice(
-                        (currentPage - 1) * articlesPerPage + 1,
-                        currentPage * articlesPerPage + 1
-                    )
-                    .map((a) => (
-                        <ArticleOverview
-                            key={a.slug}
-                            slug={a.slug}
-                            title={a.title}
-                            date={a.date}
-                            authorName={a.authorName}
-                            timeToRead={a.timeToRead}
-                            description={a.description}
-                            thumbnailSrc={a.thumbnailSrc}
-                        />
-                    ))}
-            </div>
-
-            <Pagination currentPage={currentPage} totalPages={totalPages} />
+            {articles.length > 1 && (
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-[42px] py-[76px]">
+                    {articles
+                        .slice(
+                            (currentPage - 1) * articlesPerPage + 1,
+                            currentPage * articlesPerPage + 1
+                        )
+                        .map((a) => (
+                            <ArticleOverview
+                                key={a.slug}
+                                slug={a.slug}
+                                title={a.title}
+                                date={a.date}
+                                authorName={a.authorName}
+                                timeToRead={a.timeToRead}
+                                description={a.description}
+                                thumbnailSrc={a.thumbnailSrc}
+                            />
+                        ))}
+                </div>
+            )}
+            {articles.length > 1 && (
+                <Pagination currentPage={currentPage} totalPages={totalPages} />
+            )}
             <CallToAction className="my-32" />
         </SiteContent>
     );
