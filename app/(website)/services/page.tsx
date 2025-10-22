@@ -68,7 +68,7 @@ export default function ServicesPage() {
                     iconMaxHeight={72}
                     header="コスト削減診断"
                 >
-                    日常業務でパソコンを使う際に分からないことやトラブルがあった場合、お電話一本で当社のスタッフがサポートをご提供します。
+                    既存のITベンダー・サービス提供事業者の請求書を当社にお送りいただくだけで、毎月削減可能な金額を算出します。
                 </CardWithCaption>
                 <CardWithCaption
                     iconSrc="/services/3.svg"
@@ -76,15 +76,15 @@ export default function ServicesPage() {
                     iconMaxHeight={72}
                     header="ITツール選定・導入支援"
                 >
-                    日常業務でパソコンを使う際に分からないことやトラブルがあった場合、お電話一本で当社のスタッフがサポートをご提供します。
+                    エクセルや手書きに依存した業務のDXに際し、貴社に最適な製品をお探しし、導入をお手伝いします。
                 </CardWithCaption>
                 <CardWithCaption
                     iconSrc="/services/4.svg"
                     iconAlt="Service 4"
                     iconMaxHeight={72}
-                    header="問い合わせ対応・サポート"
+                    header="運用支援"
                 >
-                    日常業務でパソコンを使う際に分からないことやトラブルがあった場合、お電話一本で当社のスタッフがサポートをご提供します。
+                    当社では販売後のサポートを重要視しています。日々の運用を改善していくための継続的なアフターサービスをご提供します。
                 </CardWithCaption>
             </div>
 
