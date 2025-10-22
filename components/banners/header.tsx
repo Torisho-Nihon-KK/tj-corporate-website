@@ -33,7 +33,7 @@ export default function Header() {
                         </Link>
 
                         {/* Navigation */}
-                        <nav className="hidden md:flex items-center space-x-10 ">
+                        <nav className="hidden lg:flex items-center space-x-10 ">
                             <Link href="/" className="">
                                 ホーム
                             </Link>
@@ -84,7 +84,7 @@ export default function Header() {
 
                         {/* Contact Button */}
                         <Link href="/contact" className="flex items-center ">
-                            <Button className="p-0.75 hidden md:flex">
+                            <Button className="p-0.75 hidden lg:flex">
                                 <span className="rounded-full w-8 h-8 p-3 bg-white-15 flex items-center justify-center">
                                     <Phone className="w-4 h-4" />
                                 </span>
@@ -97,7 +97,7 @@ export default function Header() {
                 </div>
 
                 <Button
-                    className="flex md:hidden w-[36px] p-1.25 rounded-full"
+                    className="flex lg:hidden w-[36px] p-1.25 rounded-full"
                     onClick={() => setSidebarOpen(true)}
                 >
                     <Image

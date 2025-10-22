@@ -49,7 +49,7 @@ export default async function ArticlesPage({
                 </Button>
             </div> */}
             {articles.length > 1 && (
-                <div className="grid grid-cols-2 lg:grid-cols-3 gap-[42px] py-[76px]">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[42px] py-[76px]">
                     {articles
                         .slice(
                             (currentPage - 1) * articlesPerPage + 1,

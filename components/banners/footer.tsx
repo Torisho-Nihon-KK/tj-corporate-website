@@ -12,7 +12,7 @@ import { Text } from "../ui/text";
 export default function Footer() {
     return (
         <footer className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-            <div className="px-[64px] pt-[42px] mt-9 mb-0 py-6 items-center justify-between rounded-t-2xl grid md:grid-cols-3 grid-cols-1 z-10 shadow-xl relative overflow-hidden">
+            <div className="px-[64px] pt-[42px] mt-9 mb-0 py-6 items-center justify-between rounded-t-2xl grid grid-cols-1 md:grid-cols-3 z-10 shadow-xl relative overflow-hidden">
                 {/* Background noise image */}
                 <Image
                     src="/noise.svg"
@@ -110,18 +110,21 @@ export default function Footer() {
                         </DropdownMenu>
                     </div>
                 </div>
-                <span className="md:col-span-3 flex justify-center items-center relative z-10 text-primary-muted">
-                    {/* TODO: Fix the font family unable to link to top level layout. */}
-                    <Link
-                        href="/"
-                        className="block px-4 my-3 text-primary hover:underline"
-                    >
-                        <Text>個人情報保護方針</Text>
-                    </Link>
-                    <Text className="display-inline">
-                        © 2025 鳥商日本株式会社. All rights reserved.
-                    </Text>
-                </span>
+                <div className="col-span-1 md:col-span-3 flex flex-col md:flex-row justify-center items-center relative z-10 text-primary-muted w-full gap-0 md:gap-3  px-4 my-3">
+                    <div>
+                        <Link
+                            href="/"
+                            className="block text-primary hover:underline"
+                        >
+                            <Text>個人情報保護方針</Text>
+                        </Link>
+                    </div>
+                    <div className="justify-end">
+                        <Text className="display-inline">
+                            © 2025 鳥商日本株式会社. All rights reserved.
+                        </Text>
+                    </div>
+                </div>
             </div>
         </footer>
     );

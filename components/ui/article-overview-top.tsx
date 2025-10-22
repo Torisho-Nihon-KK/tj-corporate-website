@@ -21,9 +21,11 @@ export default function TopArticleOverview({
     });
 
     return (
-        <div className={`grid grid-cols-3 gap-[42px] items-center`}>
-            <Card className="m-0 h-[400px] col-span-2">
-                <CardContent className="p-0 h-full w-full relative">
+        <div
+            className={`grid grid-cols-1 xl:grid-cols-3 gap-[42px] items-center`}
+        >
+            <Card className="m-0 h-[250px] md:h-[350px] lg:h-[400px] max-h-[400px] w-full md:w-[75%] xl:w-full col-span-2">
+                <CardContent className="p-0 h-full relative">
                     {thumbnailSrc && (
                         <Image
                             src={thumbnailSrc}
