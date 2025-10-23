@@ -2,10 +2,13 @@ import { readdir, readFile } from "node:fs/promises";
 import path from "path";
 import matter from "gray-matter";
 import { ArticleOverviewProps } from "@/components/ui/article-overview";
+import { cache } from "react";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
 
-export async function getAllArticles(): Promise<ArticleOverviewProps[]> {
+export const getAllArticles = cache(async function getAllArticles(): Promise<
+    ArticleOverviewProps[]
+> {
     const files = await readdir(CONTENT_DIR);
     const mdFiles = files.filter(
         (f) => f.endsWith(".md") || f.endsWith(".mdx")
@@ -37,19 +40,23 @@ export async function getAllArticles(): Promise<ArticleOverviewProps[]> {
     return articles.sort(
         (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
     );
-}
+});
 
-export async function getOtherArticlesExceptSlug(
-    slug: string
-): Promise<ArticleOverviewProps[]> {
-    const articles = await getAllArticles();
-    return articles.filter((a) => a.slug !== slug);
-}
+export const getOtherArticlesExceptSlug = cache(
+    async function getOtherArticlesExceptSlug(
+        slug: string
+    ): Promise<ArticleOverviewProps[]> {
+        const articles = await getAllArticles();
+        return articles.filter((a) => a.slug !== slug);
+    }
+);
 
-export async function getArticleSlugs(): Promise<string[]> {
+export const getArticleSlugs = cache(async function getArticleSlugs(): Promise<
+    string[]
+> {
     const files = await readdir(CONTENT_DIR);
     const mdFiles = files.filter(
         (f) => f.endsWith(".md") || f.endsWith(".mdx")
     );
     return mdFiles.map((file) => file.replace(/\.mdx?$/, ""));
-}
+});
