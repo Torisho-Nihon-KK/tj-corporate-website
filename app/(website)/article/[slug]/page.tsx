@@ -65,6 +65,21 @@ export default async function Page({ params }: { params: { slug: string } }) {
     );
 }
 
+export async function generateMetadata({
+    params,
+}: {
+    params: { slug: string };
+}) {
+    const { slug } = await params;
+    const rawContent = readFile(`./content/${slug}.mdx`, "utf8");
+
+    const { data } = matter(await rawContent);
+    return {
+        title: data.title,
+        description: data.description,
+    };
+}
+
 export async function generateStaticParams() {
     const slugs = await getArticleSlugs();
     return slugs.map((s) => ({ slug: s }));

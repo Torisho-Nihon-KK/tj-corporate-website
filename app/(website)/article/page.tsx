@@ -5,6 +5,12 @@ import Pagination from "./pagination";
 import CallToAction from "@/components/ui/call-to-action";
 import { getAllArticles } from "@/lib/articles";
 
+export const metadata = {
+    title: "ブログ | 鳥商日本株式会社・東京都板橋区のITカンパニー",
+    description:
+        "当社の日常や、提供サービスについての紹介記事などを投稿しています。地域密着のITカンパニーの内側を覗いてみませんか？",
+};
+
 export default async function ArticlesPage({
     searchParams,
 }: {
