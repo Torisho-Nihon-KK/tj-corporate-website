@@ -44,16 +44,17 @@ export default function Header() {
 
                             <div className="relative group">
                                 <DropdownMenu>
-                                    <DropdownMenuTrigger className="flex items-center">
-                                        法的情報
-                                        <span className="ml-2">
-                                            <Image
-                                                src="/arrow-down.svg"
-                                                alt="Dropdown"
-                                                width={10}
-                                                height={5}
-                                            />
-                                        </span>
+                                    <DropdownMenuTrigger>
+                                        <div className="flex items-center flex-row gap-2">
+                                            <div>法的情報</div>
+                                            <div className="w-[10px] h-[5px] relative">
+                                                <Image
+                                                    src="/arrow-down.svg"
+                                                    alt="Dropdown"
+                                                    fill
+                                                />
+                                            </div>
+                                        </div>
                                     </DropdownMenuTrigger>
                                     <DropdownMenuContent
                                         side="bottom"
