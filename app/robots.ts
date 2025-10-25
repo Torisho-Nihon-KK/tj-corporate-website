@@ -7,6 +7,9 @@ export default function robots(): MetadataRoute.Robots {
             allow: "/",
             disallow: "/private/",
         },
-        sitemap: "https://www.torishojp.com/sitemap.xml",
+        sitemap: [
+            "https://www.torishojp.com/sitemap.xml",
+            "https://www.torishojp.com/article/sitemap.xml",
+        ],
     };
 }
