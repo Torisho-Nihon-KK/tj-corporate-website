@@ -49,10 +49,12 @@ export default function Article({
                         </Text>
                     </div>
                 </div>
-                <Heading size="md">{title}</Heading>
+                <div>
+                    <Heading size="md">{title}</Heading>
+                </div>
 
                 {thumbnailSrc && (
-                    <div className="flex items-center justify-center h-[400px]">
+                    <div className="items-center justify-center h-[400px] overflow-hidden ">
                         <Image
                             src={thumbnailSrc}
                             alt={title}
