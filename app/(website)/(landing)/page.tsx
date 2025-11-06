@@ -7,6 +7,7 @@ import { Text } from "@/components/ui/text";
 import { CTAButton } from "@/components/ui/cta-button";
 import { Underline } from "@/components/ui/underline";
 import CallToAction from "@/components/ui/call-to-action";
+import Link from "next/link";
 
 export default function LandingPage() {
     return (
@@ -48,7 +49,7 @@ export default function LandingPage() {
                 </CardContent>
             </Card>
 
-            <Card className="grid xl:grid-cols-2 grid-cols-1 text-center relative align-left mx-0 py-4 gap-3 xl:gap-0 items-center">
+            <Card className="text-center relative align-left mx-0 py-4 items-center ">
                 <Image
                     src="/landing/tree.svg"
                     className="absolute xl:left-0 xl:top-[-15px] xl:rotate-180 top-[-10px] right-[-78px] scale-100 xl:scale-175"
@@ -57,8 +58,8 @@ export default function LandingPage() {
                     height={0}
                     style={{ width: "auto", maxHeight: "150px" }}
                 />
-                <CardContent className="px-3 p-0 flex mx-auto xl:mr-[140px] my-auto align-right justify-center xl:justify-end text-right w-full items">
-                    <div className="flex items-center justify-end">
+                <CardContent className="grid xl:grid-cols-2 grid-cols-1 px-3 p-0 mx-auto my-auto align-left items-center justify-center xl:justify-end text-right w-full items gap-3 xl:gap-0 ">
+                    <div className="flex items-center justify-center xl:justify-end xl:mr-[140px]">
                         <Image
                             src="/landing/smiley-face.svg"
                             alt=""
@@ -71,48 +72,54 @@ export default function LandingPage() {
                             力強いパートナーネットワーク
                         </Text>
                     </div>
-                </CardContent>
-                <CardContent className="flex gap-2 md:gap-4 justify-self-center justify-end min-h-[37px] max-h-[55px] w-auto px-3 items-center m-auto xl:mr-[40px]">
-                    <div className="flex flex-1 items-center justify-center gap-4 md:gap-6 w-full h-full">
-                        <div className="flex-1 min-w-0 flex items-center justify-center">
+                    <div className="flex flex-row h-[55px] relative justify-center xl:justify-end gap-3 xl:gap-6 mr-0 xl:mr-[40px] px-3 xl:px-0">
+                        <div className="w-auto h-full relative">
+                            <Link href="https://www.biz.ne.jp/company/torishojp/">
+                                <Image
+                                    src="/landing/biz_partner_type1.svg"
+                                    alt="ビジネスマッチングサイト「比較ビズ」認定企業"
+                                    width={0}
+                                    height={0}
+                                    style={{
+                                        width: "auto",
+                                        height: "100%",
+                                    }}
+                                />
+                            </Link>
+                        </div>
+                        <div className="w-auto h-full relative">
                             <Image
                                 src="/landing/partner-xserver.svg"
                                 alt="XServer Business Partner"
-                                className="h-full max-h-[55px] w-auto flex-shrink min-w-0"
                                 width={0}
                                 height={0}
                                 style={{
-                                    objectFit: "contain",
-                                    maxHeight: "55px",
-                                    width: "100%",
+                                    width: "auto",
+                                    height: "100%",
                                 }}
                             />
                         </div>
-                        <div className="flex-1 min-w-0 flex items-center justify-center">
+                        <div className="w-auto h-full relative">
                             <Image
                                 src="/landing/partner-hp.svg"
                                 alt="HP Business Partner"
-                                className="h-full max-h-[55px] w-auto flex-shrink min-w-0"
                                 width={0}
                                 height={0}
                                 style={{
-                                    objectFit: "contain",
-                                    maxHeight: "55px",
-                                    width: "100%",
+                                    width: "auto",
+                                    height: "100%",
                                 }}
                             />
                         </div>
-                        <div className="flex-1 min-w-0 flex items-center justify-center">
+                        <div className="w-auto h-full relative">
                             <Image
                                 src="/landing/partner-microsoft.svg"
                                 alt="Microsoft Partner"
-                                className="h-full max-h-[55px] w-auto flex-shrink min-w-0"
                                 width={0}
                                 height={0}
                                 style={{
-                                    objectFit: "contain",
-                                    maxHeight: "55px",
-                                    width: "100%",
+                                    width: "auto",
+                                    height: "100%",
                                 }}
                             />
                         </div>

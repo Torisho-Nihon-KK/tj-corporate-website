@@ -8,6 +8,7 @@ import {
     DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import { Text } from "../ui/text";
+import { clsx } from "clsx";
 
 export default function Footer() {
     return (
@@ -29,7 +30,10 @@ export default function Footer() {
                         alt="Torisho Logo"
                         width={150}
                         height={105}
-                        className="h-[100%] w-auto"
+                        style={{
+                            height: "100%",
+                            width: "auto",
+                        }}
                     />
                 </div>
                 <div className="items-center mx-auto relative z-10">
