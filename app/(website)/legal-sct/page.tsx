@@ -40,12 +40,20 @@ export default function Legal() {
                                 </td>
                             </tr>
                             <tr>
+                                <th>営業所</th>
+                                <td>
+                                    〒106-0032
+                                    <br />
+                                    東京都港区六本木7-7-7 Tri-Seven Roppongi 8階
+                                </td>
+                            </tr>
+                            <tr>
                                 <th>電話番号</th>
-                                <td>03-5918-9086</td>
+                                <td>03-6629-3171</td>
                             </tr>
                             <tr>
                                 <th>電話受付時間</th>
-                                <td>10:00 から 19:00まで（土日祝日を除く）</td>
+                                <td>8:30 から 17:30 まで（土日祝日を除く）</td>
                             </tr>
                             <tr>
                                 <th>メールアドレス</th>
